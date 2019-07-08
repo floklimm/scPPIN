@@ -1,0 +1,238 @@
+  # igraph version for functional module detection
+
+ # source("./libraryiGraphFunctionalModule.R")
+
+  library(scPPIN)
+
+  # library(BioNet)
+  library(igraph)
+  # library(dplyr)
+  # library(RColorBrewer)
+  # library(fields)
+  # library(topGO)
+  # library(sgof)
+  library(tidyverse)
+  require(visNetwork, quietly = TRUE)
+  # library(jsonlite)
+  #library(extrafont)
+  #loadfonts()
+
+
+  # 1) Load data
+  # 1a) Load biogrid network data
+  biogridNetwork <- read_graph('biogridHomoSapiens3.5.166.graphml', format='graphml')
+
+  # 1b) Load gene expression data (in the form of p-values)
+  readGenes = read.csv("./../../data/singleCellGeneExpression/DEG_in_hepatocytes_clusters_nofilter_logfc.csv")
+
+
+  geneData = data.frame(readGenes)
+  #geneData <- geneData[,c("symbol","FS_vs_BS_pvalue","DS_vs_BS_pvalue","DFS_vs_BS_pvalue")] # select only the columns of interest
+  geneData <- geneData[,c("p_val","avg_logFC","pct1","pct2","p_val_adj","cluster","gene")] # select only the columns of interest
+
+  FDR <- 10^(-35)
+
+
+  clusterInterested = 1
+
+  indecesInterested <- which(geneData[6] == clusterInterested)
+
+# 2) Prepare the data
+  geneAsList <- as.list(as.data.frame(t(geneData[indecesInterested,c(5)])))
+  names(geneAsList) <- geneData[indecesInterested,]$gene
+  geneAsList <- unlist(geneAsList)
+  # 3) The actual calculation
+  activeSubgraph1<- detectFunctionalModule(biogridNetwork,geneAsList,FDR)
+  #activeSubgraph1<-activeSubgraphTemp[[1]]
+  #geneSubset <- intersect(V(biogridNetwork)$name,names(geneAsList) )
+
+  clusterInterested = 2
+
+  indecesInterested <- which(geneData[6] == clusterInterested)
+  # 2) Prepare the data
+  geneAsList <- as.list(as.data.frame(t(geneData[indecesInterested,c(5)])))
+  names(geneAsList) <- geneData[indecesInterested,]$gene
+  geneAsList <- unlist(geneAsList)
+  # 3) The actual calculation
+  activeSubgraph2<- detectFunctionalModule(biogridNetwork,geneAsList,FDR)
+  #activeSubgraph2<-activeSubgraphTemp[[1]]
+
+  clusterInterested = 3
+
+  indecesInterested <- which(geneData[6] == clusterInterested)
+  # 2) Prepare the data
+  geneAsList <- as.list(as.data.frame(t(geneData[indecesInterested,c(5)])))
+  names(geneAsList) <- geneData[indecesInterested,]$gene
+  geneAsList <- unlist(geneAsList)
+  # 3) The actual calculation
+  activeSubgraph3<- detectFunctionalModule(biogridNetwork,geneAsList,FDR)
+  #activeSubgraph3<-activeSubgraphTemp[[1]]
+
+  clusterInterested = 7
+
+  indecesInterested <- which(geneData[6] == clusterInterested)
+  # 2) Prepare the data
+  geneAsList <- as.list(as.data.frame(t(geneData[indecesInterested,c(5)])))
+  names(geneAsList) <- geneData[indecesInterested,]$gene
+  geneAsList <- unlist(geneAsList)
+  # 3) The actual calculation
+  activeSubgraph7<- detectFunctionalModule(biogridNetwork,geneAsList,FDR)
+  #activeSubgraph7<-activeSubgraphTemp[[1]]
+
+  clusterInterested = 5
+
+  indecesInterested <- which(geneData[6] == clusterInterested)
+  # 2) Prepare the data
+  geneAsList <- as.list(as.data.frame(t(geneData[indecesInterested,c(5)])))
+  names(geneAsList) <- geneData[indecesInterested,]$gene
+  geneAsList <- unlist(geneAsList)
+  # 3) The actual calculation
+  activeSubgraph5<- detectFunctionalModule(biogridNetwork,geneAsList,FDR)
+  #activeSubgraph5<-activeSubgraphTemp[[1]]
+
+  clusterInterested = 6
+
+  indecesInterested <- which(geneData[6] == clusterInterested)
+  # 2) Prepare the data
+  geneAsList <- as.list(as.data.frame(t(geneData[indecesInterested,c(5)])))
+  names(geneAsList) <- geneData[indecesInterested,]$gene
+  geneAsList <- unlist(geneAsList)
+  activeSubgraph6<- detectFunctionalModule(biogridNetwork,geneAsList,FDR)
+  #activeSubgraph6<-activeSubgraphTemp[[1]]
+
+  # 2) Construct a network for visualisation
+  geneSubset <- intersect(V(biogridNetwork)$name,names(geneAsList) )
+  networkFiltered <- induced_subgraph(biogridNetwork,  geneSubset)
+
+  unionActiveModules = graph.union(activeSubgraph7,activeSubgraph6,activeSubgraph5,activeSubgraph3,activeSubgraph2,activeSubgraph1)
+
+  e <- get.edgelist(unionActiveModules,names=FALSE)
+  computedNodePositions <- qgraph.layout.fruchtermanreingold(e,vcount=vcount(unionActiveModules))
+
+  #plotFunctionalModule(unionActiveModules,fdr=FDR,layoutGraph=computedNodePositions)
+
+
+  colours <-brewer.pal(10, "Set3")
+
+  colourVec <- rep(NA,length(V(unionActiveModules)))
+
+  colourVec[ which(!is.na(nodes$id_2))] <- colours[3]
+  colourVec[ which(!is.na(nodes$id_3))] <- colours[4]
+  colourVec[ which(!is.na(nodes$id_4))] <- colours[6]
+  colourVec[ which(!is.na(nodes$id_5))] <- colours[7]
+  colourVec[ which(!is.na(nodes$id_6))] <- colours[8]
+  colourVec[ which(!is.na(nodes$id_1))] <- colours[2]
+
+  layoutGraph <- layout_nicely(unionActiveModules, dim = 2)
+  # plot the graph
+  plot(unionActiveModules,layout=computedNodePositions,
+       vertex.size	= 5,
+       #vertex.label="",
+       vertex.label.color=colourVec,
+       vertex.color = colourVec,
+       edge.width=2,
+       edge.curved=0.3,
+       edge.color="black"
+  )
+
+
+  # # vertex properties
+  # vertex.shape=shapeVec,
+  # vertex.color = vColor,vertex.label.color=labelColorVec,
+  # vertex.frame.color=fracmeVec,
+  # vertex.label.font=boldFontVec	,
+  # vertex.size	= nodeScale*12,
+  # vertex.label.cex=nodeScale*0.3,
+  #
+  # # edge properties
+  # edge.width=2,
+  # edge.curved=0.3,
+  # edge.color="black"
+
+  # edges <-  igraph::as_data_frame(unionActiveModules, what = "edges")
+  # nodes <-  igraph::as_data_frame(unionActiveModules, what="vertices")
+  #
+  # #nodes$shape <- "circle"
+  # nodes$value <- 50
+  # nodes$id <- nodes$name
+  # #nodes$label <- nodes$name
+  #
+  #
+  # colours <-brewer.pal(6, "Set3")
+  #
+  # colourVec <- rep(NA,length(V(unionActiveModules)))
+  #
+  # # colourVec[ which(!is.na(nodes$id_2))] <- "blue"
+  # # colourVec[ which(!is.na(nodes$id_3))] <- "green"
+  # # colourVec[ which(!is.na(nodes$id_4))] <- "orange"
+  # # colourVec[ which(!is.na(nodes$id_5))] <- "purple"
+  # # colourVec[ which(!is.na(nodes$id_6))] <- "darkred"
+  # # colourVec[ which(!is.na(nodes$id_1))] <- "red"
+  #
+  #
+  # colourVec[ which(!is.na(nodes$id_2))] <- colours[2]
+  # colourVec[ which(!is.na(nodes$id_3))] <- colours[3]
+  # colourVec[ which(!is.na(nodes$id_4))] <- colours[4]
+  # colourVec[ which(!is.na(nodes$id_5))] <- colours[5]
+  # colourVec[ which(!is.na(nodes$id_6))] <- colours[6]
+  # colourVec[ which(!is.na(nodes$id_1))] <- colours[1]
+  #
+  #
+  # # which(!is.na(nodes$id_1))
+  # #which(!is.na(nodes$id_1))
+  # #nodes$group <- is.na(nodes$id_1)
+  #
+  #
+  # #nodes$group = c("GrA", "GrB")
+  # nodes$color = colourVec
+  #
+  #
+  # visNetwork(nodes, edges, width = "100%") %>% visExport(type = "pdf", name = "scPPINIllustration",
+  #                                                        float = "left", style= "")
+  #
+  #
+  # visNetwork(nodes, edges, width = "100%") %>% visLegend()
+
+
+
+
+  # nodes <- data.frame(id = 1:10,
+  #
+  #                     # add labels on nodes
+  #                     label = paste("Node", 1:10),
+  #
+  #                     # add groups on nodes
+  #                     group = c("GrA", "GrB"),
+  #
+  #                     # size adding value
+  #                     value = 1:10,
+  #
+  #                     # control shape of nodes
+  #                     shape = c("square", "triangle", "box", "circle", "dot", "star",
+  #                               "ellipse", "database", "text", "diamond"),
+  #
+  #                     # tooltip (html or character), when the mouse is above
+  #                     title = paste0("<p><b>", 1:10,"</b><br>Node !</p>"),
+  #
+  #                     # color
+  #                     color = c("darkred", "grey", "orange", "darkblue", "purple"),
+  #
+  #                     # shadow
+  #                     shadow = c(FALSE, TRUE, FALSE, TRUE, TRUE))
+  #
+  # # head(nodes)
+  # # id  label group value    shape                     title    color shadow
+  # #  1 Node 1   GrA     1   square <p><b>1</b><br>Node !</p>  darkred  FALSE
+  # #  2 Node 2   GrB     2 triangle <p><b>2</b><br>Node !</p>     grey   TRUE
+  #
+  # edges <- data.frame(from = c(1,2,5,7,8,10), to = c(9,3,1,6,4,7))
+  #visNetwork(nodes, edges, height = "500px", width = "100%")
+
+
+  #networkCombined <- induced_subgraph(biogridNetwork,  V(graph.union(activeSubgraph2,activeSubgraph1)))
+
+  #shortest_paths(networkFiltered, 1, to = V(networkFiltered))
+
+  #exportGraph(activeSubgraph,"activeModule.json")
+
+

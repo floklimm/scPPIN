@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1555584489898.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "E3CCBEFE",
+    "lastKnownWriteTime" : 1556113498,
+    "last_content_update" : 1556113498141,
+    "path" : "/data/crow/klimm/GitHub/IPSER/scPPIN/R/tutorial_scPPIN.R",
+    "project_path" : "R/tutorial_scPPIN.R",
+    "properties" : {
+        "cursorPosition" : "27,18",
+        "scrollLine" : "16"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

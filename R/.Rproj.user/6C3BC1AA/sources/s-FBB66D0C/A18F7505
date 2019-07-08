@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1561368261532.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "A18F7505",
+    "lastKnownWriteTime" : 1561371180,
+    "last_content_update" : 1561371180541,
+    "path" : "/data/crow/klimm/GitHub/IPSER/scPPIN/R/scPPIN-library.R",
+    "project_path" : "R/scPPIN-library.R",
+    "properties" : {
+        "cursorPosition" : "495,0",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

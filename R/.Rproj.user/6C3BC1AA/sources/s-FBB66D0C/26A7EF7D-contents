@@ -1,0 +1,16 @@
+# example of how to use scPPIN for publically available data from the Gene Expression Omnibus (GEO)
+
+
+library(GEOquery) # for downloading data from GEO
+library(Seurat)
+
+
+#gse <- getGEO("GSE94820", GSEMatrix = TRUE)
+#show(gse)
+
+
+#gseGSE94820 <- getGEO('GSE94820', GSEMatrix=FALSE)
+
+data = getGEO("GSE94820")
+
+$seuratObject <- CreateSeuratObject(counts=data$`GSE94820-GPL16791_series_matrix.txt.gz`[[1]])

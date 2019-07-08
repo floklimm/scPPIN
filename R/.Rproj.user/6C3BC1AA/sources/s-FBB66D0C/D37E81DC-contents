@@ -1,0 +1,167 @@
+#
+# This is the server logic of a Shiny web application. You can run the
+# application by clicking 'Run App' above.
+#
+# Find out more about building applications with Shiny here:
+#
+#    http://shiny.rstudio.com/
+#
+
+library(shiny)
+#library(scPPIN)
+require(visNetwork)
+
+
+#library(r2d3)
+
+# Define server logic required to draw a histogram
+shinyServer(function(input, output) {
+
+  # # load PPIN
+  # if (strcmp(organism,"Homo sapiens"){
+  #   ppin <- loadPPIN()
+  # }
+  # else if (strcmp(organism,"Mus musculus")){
+  #   ppin <- NULL
+  # }
+  # else{
+  #   ppin <- NULL
+  # },
+
+  # # load PPIN
+  # ppin <- reactive({
+  # if (identical(input$organism,"Homo sapiens")){
+  #   ppin <- read_graph('./data/ppin/biogridHomoSapiens3.5.166.graphml', format='graphml')
+  #   print(ppin)
+  # }
+  # else {
+  #   ppin <- NULL
+  # }
+  #   ppin <- simplify(ppin) # removing parallel edges and self-loops
+  # })
+  # ppin <- reactive({
+  # if (identical(input$organism,"Homo sapiens")){
+  # ppin <- read_graph('./data/ppin/biogridHomoSapiens3.5.166.graphml', format='graphml')
+  # }
+  #   return(ppin)
+  # })
+
+  #ppin <- loadPPIN()
+
+
+
+  #names(pValues) <- pValuesRaw$gene
+
+  #FDR <-10^(input$log10FDR)
+
+  #functionalModule <-detectFunctionalModule(ppin,pValues,FDR)
+
+
+  functionalModuleOutput <- eventReactive(input$goButton, {
+    # get protien interaction network
+    if (identical(input$organism,"Homo sapiens")){
+      ppin <- read_graph('./data/ppin/biogridHomoSapiens3.5.166.graphml', format='graphml')
+    }
+    else if (identical(input$organism,"Mus musculus")){
+      ppin <- read_graph('./data/ppin/biogridMusMusculus3.5.169.graphml', format='graphml')
+    }
+    else {
+      ppin <- NULL
+    }
+
+    # compute False Discovery Rate
+    FDR <-10^(input$log10FDR)
+
+    # read p-Values
+    # (if not provided use the default values)
+    withProgress(message = 'Functional Module Computation', value = 0, {
+    if(!is.null(input$pValFile)){
+      pValTemp <- read.csv(input$pValFile$datapath)
+      pValues <- as.numeric(pValTemp[[2]])
+      names(pValues) <- as.character(pValTemp[[1]])
+    }
+      else {
+        pValTemp <- read.csv('./data/pVal/examplePvalues.csv')
+        pValues <- as.numeric(pValTemp[[2]])
+        names(pValues) <- as.character(pValTemp[[1]])
+      }
+  })
+
+
+    withProgress(message = 'Functional Module Computation', value = 0.3, {
+        functionalModule <-detectFunctionalModule(ppin,pValues,FDR)
+      })
+
+
+    # if (length(V(functionalModule))==1) {
+    #   return('only a single protein: increase FDR')
+    # }
+    # else
+    return(list(as_edgelist(functionalModule),functionalModule))
+  })
+
+  # # writing the edgelist to the table
+  # if (length(V(functionalModuleOutput()[[1]]))==1){
+  #   output$table <- renderTable({
+  #     'functionalModuleOutput()[[1]]'
+  #   })
+  # }
+  # else {  output$table <- renderTable({
+  #   functionalModuleOutput()[[1]]
+  # })}
+
+  output$table <- renderTable({
+    if(length(V(functionalModuleOutput()[[2]]))>1){
+      functionalModuleOutput()[[1]]
+    }
+    else
+    {
+      V(functionalModuleOutput()[[2]])[[1]]$name
+    }
+      #functionalModuleOutput()[[1]]
+    })
+
+
+# # add the normal plot
+#   output$plot <- renderPlot({
+#     FDR <-10^(input$log10FDR)
+#     plotFunctionalModule(functionalModuleOutput()[[2]],FDR,nodeScale=50/length(V(functionalModuleH1H3))     )
+#   }, res = 100)
+
+
+
+  #
+  # Downloadable csv of selected dataset ----
+  output$scPPIN_DownloadGraphML <- downloadHandler(
+    filename = function() {
+      paste("scPPIN-graphml.csv", sep = "")
+    },
+    content = function(file) {
+      write_graph(functionalModuleOutput()[[2]],file,format="graphml")
+    }
+  )
+
+  # prepare files for download
+  output$scPPIN_DownloadEdgeList <- downloadHandler(
+    filename = function() {
+      paste("scPPIN-edgeList.csv", sep = "")
+    },
+    content = function(file) {
+      write.csv(functionalModuleOutput()[[1]], file, row.names = FALSE)
+    }
+  )
+
+  # interactive visualisation of the network
+  output$network <- renderVisNetwork({
+    FDR <-10^(input$log10FDR)
+    data <- toVisNetworkData(functionalModuleOutput()[[2]])
+    data$nodes$shape <- ifelse(data$nodes$pVal<FDR,'circle','box')
+    data$nodes$color <- ifelse(data$nodes$pVal<FDR,'lightblue','red')
+    visNetwork(nodes = data$nodes, edges = data$edges, height = "500px") %>%
+      visNodes(size=10) %>%
+      visEdges(width=2,smooth=TRUE,color='grey')
+  })
+
+
+
+})
