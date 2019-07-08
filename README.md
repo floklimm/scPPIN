@@ -43,10 +43,11 @@ All networks and modules (which are subnetworks) are igraph objects.
 
 ## Tutorial
 
-The usage is demonstrated for two examples in *tutorial_scPPIN.R*. In these tutorials the steps 1 to 3 (preprocessing, cluster identification, and computation of differentially expressed genes) replaced by a loading of pre-computed p-values. 
+The usage is demonstrated for two examples in *tutorial_scPPIN.R*. In these tutorials the steps 1 to 3 (preprocessing, cell cluster identification, and computation of differentially expressed genes) are replaced by a loading of pre-computed p-values. 
 
 The tutorial also demonstrates the usage of `qgraph` for a nicer plotting of the functional modules and some helper functions (e.g., `fitBUM`)
 
+The function `functionalModuleH1H3_missingData` allows the computation of functional modules while keeping proteins without gene-expression information.
 
 ## License
 This project is licensed under the AGPL - see the [LICENSE](https://github.com/floklimm/scPPIN/blob/master/LICENSE) file for details.
