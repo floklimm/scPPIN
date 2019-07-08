@@ -3,10 +3,11 @@ Functional module detection through integration of single-cell RNA sequencing da
 
 This R library allows the computation of active modules in protein-protein interaction networks. The method is outlined in our manuscript
 
-> Functional module detection through integration of single-cell RNA sequencing data with protein–protein interaction networks
+> Functional module detection through integration of single-cell RNA sequencing data with protein–protein interaction networks.
+>
 > Florian Klimm, Enrique M. Toledo, Thomas Monfeuga, Fang Zhang, Charlotte M. Deane, and Gesine Reinert
 
-The article is available HERE
+The article is available HERE (link to be included)
 
 ## Dependencies
 * R
@@ -16,17 +17,17 @@ The article is available HERE
     * RColorBrewer
     * MASS
     * jsonlite
-* dapcstp [(available on GitHub](https://github.com/mluipersbeck/dapcstp)
+* dapcstp [(available on GitHub)](https://github.com/mluipersbeck/dapcstp)
 
-* The solver dapcstp can be installed with the linked source code. We also provide pre-compiled binaries for Unix (Fedora 30) and Mac. It is likely, however, that you have to compile it for your system.*
+**The solver dapcstp can be installed with the linked source code. We also provide pre-compiled binaries for Unix (Fedora 30) and Mac. It is likely, however, that you have to compile it for your system.**
 
 ## Usage
 
 The pipeline is as follows
-1. Computation of differentially expressed genes p-values with an approach of your choice (e.g., FindMarkers function in [SEURAT](https://satijalab.org/seurat/))
+1. Computation of differentially expressed genes p-values with an approach of your choice (e.g., `FindMarkers` function in [SEURAT](https://satijalab.org/seurat/))
 2. Load a protein--protein interaction network (we here provide a PPIN for *Homo sapiens* that was constructed from [BioGRID](https://thebiogrid.org/)
-3. Use the function `detectFunctionalModule(ppin,pValues,FDR)' to compute the functional module
-4. Illustrate the detected modules with the function `plotFunctionalModule(functionalModule,FDR)'
+3. Use the function `detectFunctionalModule(ppin,pValues,FDR)` to compute the functional module
+4. Illustrate the detected modules with the function `plotFunctionalModule(functionalModule,FDR)`
 
 In Step 3 all computations are executed:
 A. Fitting of a beta-uniform model to the observed p-values,
