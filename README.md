@@ -24,26 +24,28 @@ The article is available HERE (link to be included)
 ## Usage
 
 The pipeline is as follows
-0. Preprocessing of single-cell RNA-seq data
-1. Detection of cell clusters e.g., `FindClusters` function in [SEURAT](https://satijalab.org/seurat/))
-1. Computation of differentially expressed genes p-values with an approach of your choice (e.g., `FindAllMarkers` function in [SEURAT](https://satijalab.org/seurat/)) **Use the option `return.thresh=1` to obtain all p-values**
-2. Load a protein--protein interaction network (we here provide a PPIN for *Homo sapiens* that was constructed from [BioGRID](https://thebiogrid.org/) and can be loaded with the `loadPPIN()' function)
-3. Use the function `detectFunctionalModule(ppin,pValues,FDR)` to compute the functional module
-4. Illustrate the detected modules with the function `plotFunctionalModule(functionalModule,FDR)`
+1. Preprocessing of single-cell RNA-seq data
+2. Detection of cell clusters e.g., `FindClusters` function in [SEURAT](https://satijalab.org/seurat/))
+3. Computation of differentially expressed genes p-values with an approach of your choice (e.g., `FindAllMarkers` function in [SEURAT](https://satijalab.org/seurat/)) **Use the option `return.thresh=1` to obtain all p-values**
+4. Load a protein--protein interaction network (we here provide a PPIN for *Homo sapiens* that was constructed from [BioGRID](https://thebiogrid.org/) and can be loaded with the `loadPPIN()' function)
+5. Use the function `detectFunctionalModule(ppin,pValues,FDR)` to compute the functional module
+6. Illustrate the detected modules with the function `plotFunctionalModule(functionalModule,FDR)`
 
-In Step 3 all computations are executed:
+In Step 4 all computations are executed:
 * Fitting of a beta-uniform model to the observed p-values,
 * Construction of a node-weighted graph, 
-* Rewriting of the maximum-weight subgraph problem as a prize-collecting Steiner tree problem, and
-* Writing input files for `dapcstp',
-* Solving of the prize-collecting Steiner tree problem by calling the dapcstp solver, and
+* Rewriting of the maximum-weight subgraph problem as a prize-collecting Steiner tree problem,
+* Writing input files for `dapcstp`,
+* Solving of the prize-collecting Steiner tree problem by calling the `dapcstp` solver, and
 * Reading the solution file into R.
+
+All networks and modules (which are subnetworks) are igraph objects.
 
 ## Tutorial
 
-The usage is demonstrated for two examples in the *tutorial_scPPIN.R*. In these tutorials the step 1 (computation of differentially expressed genes) replaced by a loading of pre-computed p-values. 
+The usage is demonstrated for two examples in *tutorial_scPPIN.R*. In these tutorials the steps 1 to 3 (preprocessing, cluster identification, and computation of differentially expressed genes) replaced by a loading of pre-computed p-values. 
 
-The tutorial also demonstrates the usage of `qgraph' for a nicer plotting of the functional modules and some helper functions (e.g., `fitBUM')
+The tutorial also demonstrates the usage of `qgraph` for a nicer plotting of the functional modules and some helper functions (e.g., `fitBUM`)
 
 
 ## License
