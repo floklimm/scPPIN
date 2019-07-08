@@ -51,7 +51,7 @@ The function `functionalModuleH1H3_missingData` allows the computation of functi
 
 ![alt text][ppinModule]
 
-[ppinModule]: https://github.com/floklimm/scPPIN/images/activeModuleExampleMissingData.png "Example functional module with missing gene-expression information"
+[ppinModule]: https://github.com/floklimm/scPPIN/blob/master/images/activeModuleExampleMissingData.png "Example functional module with missing gene-expression information"
 
 
 ## License
