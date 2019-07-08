@@ -33,7 +33,7 @@ The pipeline is as follows
 
 In Step 4 all computations are executed:
 * Fitting of a beta-uniform model to the observed p-values,
-* Construction of a node-weighted graph, 
+* Construction of a node-weighted graph,
 * Rewriting of the maximum-weight subgraph problem as a prize-collecting Steiner tree problem,
 * Writing input files for `dapcstp`,
 * Solving of the prize-collecting Steiner tree problem by calling the `dapcstp` solver, and
@@ -43,11 +43,14 @@ All networks and modules (which are subnetworks) are igraph objects.
 
 ## Tutorial
 
-The usage is demonstrated for two examples in *tutorial_scPPIN.R*. In these tutorials the steps 1 to 3 (preprocessing, cell cluster identification, and computation of differentially expressed genes) are replaced by a loading of pre-computed p-values. 
+The usage is demonstrated for two examples in *tutorial_scPPIN.R*. In these tutorials the steps 1 to 3 (preprocessing, cell cluster identification, and computation of differentially expressed genes) are replaced by a loading of pre-computed p-values.
 
 The tutorial also demonstrates the usage of `qgraph` for a nicer plotting of the functional modules and some helper functions (e.g., `fitBUM`)
 
 The function `functionalModuleH1H3_missingData` allows the computation of functional modules while keeping proteins without gene-expression information.
+
+[logo]: https://github.com/floklimm/scPPIN/images/activeModuleExampleMissingData.pdf "Example functional module with missing gene-expression information"
+
 
 ## License
 This project is licensed under the AGPL - see the [LICENSE](https://github.com/floklimm/scPPIN/blob/master/LICENSE) file for details.
