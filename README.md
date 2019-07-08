@@ -44,6 +44,8 @@ All networks and modules (which are subnetworks) are igraph objects.
 
 The usage is demonstrated for two examples in *tutorial_scPPIN.R*. In these tutorials the steps 1 to 3 (preprocessing, cell cluster identification, and computation of differentially expressed genes) are replaced by a loading of pre-computed p-values.
 
+For the first, small example the obtained functional module consists of three nodes (APP, SCD, and ALDOB). For the second example, the functional module consists of sixteen nodes.
+
 The tutorial also demonstrates the usage of `qgraph` for a nicer plotting of the functional modules and some helper functions (e.g., `fitBUM`)
 
 The function `functionalModuleH1H3_missingData` allows the computation of functional modules while keeping proteins without gene-expression information.
@@ -52,6 +54,16 @@ The function `functionalModuleH1H3_missingData` allows the computation of functi
 
 [ppinModule]: https://github.com/floklimm/scPPIN/blob/master/images/activeModuleExampleMissingData.png "Example functional module with missing gene-expression information"
 
+## FAQ
+
+1. When loading the PPIN with the `load_ppin()` function I get an error *Can not open GraphML file*
+> Most likely this is happening because R does not find the file. Make sure that you are in the correct working directory `./scPPIN-master/R`
+
+2. I receive an error when executing the function `detectFunctionalModule`.
+> This occurs often when `dapcstp` is not properly installed. Make sure that it works by calling it directly from the terminal.
+
+3. I receive a segmentation fault (Core Dumped) when executing `dapcstp`.
+> This should not happen. Most likely the input file given to `dapcstp` is not correctly formatted. Inspect the file and make sure that the file is correctly written (including End-of-File).
 
 ## License
 This project is licensed under the AGPL - see the [LICENSE](https://github.com/floklimm/scPPIN/blob/master/LICENSE) file for details.
