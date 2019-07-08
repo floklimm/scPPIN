@@ -49,7 +49,7 @@ The tutorial also demonstrates the usage of `qgraph` for a nicer plotting of the
 
 The function `functionalModuleH1H3_missingData` allows the computation of functional modules while keeping proteins without gene-expression information.
 
-[logo]: https://github.com/floklimm/scPPIN/images/activeModuleExampleMissingData.pdf "Example functional module with missing gene-expression information"
+[logo]: https://github.com/floklimm/scPPIN/images/activeModuleExampleMissingData.png "Example functional module with missing gene-expression information"
 
 
 ## License
