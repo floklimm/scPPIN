@@ -1,0 +1,185 @@
+* using log directory ‘/data/crow/klimm/GitHub/scPPIN/scPPIN.Rcheck’
+* using R version 3.6.0 (2019-04-26)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --as-cran’
+* checking for file ‘scPPIN/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘scPPIN’ version ‘0.1.0’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... WARNING
+Found the following executable files:
+  dapcstp
+  dapcstpMAC
+Source packages should not contain undeclared executable files.
+See section ‘Package structure’ in the ‘Writing R Extensions’ manual.
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking serialization versions ... OK
+* checking whether package ‘scPPIN’ can be installed ... OK
+* checking installed package size ... NOTE
+  installed size is 21.4Mb
+  sub-directories of 1Mb or more:
+    R         5.1Mb
+    extdata  16.3Mb
+* checking package directory ... OK
+* checking for future file timestamps ... OK
+* checking DESCRIPTION meta-information ... OK
+* checking top-level files ... NOTE
+Non-standard files/directories found at top level:
+  ‘DAPCSTP_temp.sol’ ‘DAPCSTP_temp.stp’ ‘Rplots.pdf’ ‘dapcstp’
+  ‘dapcstpMAC’
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking R files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... NOTE
+Packages in Depends field not imported from:
+  ‘MASS’ ‘RColorBrewer’ ‘igraph’ ‘qgraph’
+  These packages need to be imported from (in the NAMESPACE file)
+  for when this namespace is loaded but not attached.
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+FunctionalModuleComputation: no visible global function definition for
+  ‘V’
+FunctionalModuleComputation: no visible global function definition for
+  ‘%>%’
+FunctionalModuleComputation: no visible global function definition for
+  ‘set_edge_attr’
+FunctionalModuleComputation: no visible global function definition for
+  ‘set_vertex_attr’
+FunctionalModuleComputation: no visible global function definition for
+  ‘add_vertices’
+FunctionalModuleComputation: no visible global function definition for
+  ‘add_edges’
+FunctionalModuleComputationMD: no visible global function definition
+  for ‘V’
+FunctionalModuleComputationMD: no visible global function definition
+  for ‘%>%’
+FunctionalModuleComputationMD: no visible global function definition
+  for ‘set_edge_attr’
+FunctionalModuleComputationMD: no visible global function definition
+  for ‘set_vertex_attr’
+FunctionalModuleComputationMD: no visible global function definition
+  for ‘add_vertices’
+FunctionalModuleComputationMD: no visible global function definition
+  for ‘add_edges’
+colorbar: no visible global function definition for ‘image’
+colorbar: no visible global function definition for ‘mtext’
+computeNodeScores: no visible global function definition for ‘coef’
+computeNodeScores: no visible global function definition for ‘median’
+detectFunctionalModule: no visible global function definition for ‘V’
+detectFunctionalModule: no visible global function definition for
+  ‘induced_subgraph’
+detectFunctionalModule: no visible global function definition for
+  ‘set_vertex_attr’
+detectFunctionalModule: no visible global function definition for
+  ‘delete_vertices’
+detectFunctionalModule: no visible global function definition for ‘V<-’
+exportGraph: no visible global function definition for ‘is.directed’
+exportGraph: no visible global function definition for ‘toJSON’
+fitBUM: no visible global function definition for ‘fitdistr’
+fitBUM: no visible global function definition for ‘plot.new’
+fitBUM: no visible global function definition for ‘par’
+fitBUM: no visible global function definition for ‘hist’
+fitBUM: no visible global function definition for ‘lines’
+fitBUM: no visible global function definition for ‘density’
+fitBUM: no visible global function definition for ‘curve’
+fitBUM: no visible binding for global variable ‘x’
+fitBUM: no visible global function definition for ‘coef’
+fitBUM: no visible global function definition for ‘segments’
+fitBUM: no visible global function definition for ‘legend’
+fitBUM: no visible global function definition for ‘text’
+importGraph: no visible global function definition for ‘fromJSON’
+importGraph: no visible global function definition for
+  ‘graph_from_data_frame’
+loadPPIN: no visible global function definition for ‘read_graph’
+loadPPIN: no visible global function definition for ‘simplify’
+plotFunctionalModule: no visible global function definition for
+  ‘layout_nicely’
+plotFunctionalModule: no visible global function definition for ‘V’
+plotFunctionalModule: no visible global function definition for ‘V<-’
+plotFunctionalModule: no visible global function definition for
+  ‘vertex_attr’
+plotFunctionalModule: no visible global function definition for
+  ‘brewer.pal’
+plotFunctionalModule: no visible global function definition for ‘par’
+plotFunctionalModule: no visible global function definition for ‘plot’
+plotFunctionalModule: no visible global function definition for
+  ‘colorRampPalette’
+plotFunctionalModule: no visible global function definition for ‘mtext’
+writeGraphDAPCSTP: no visible global function definition for ‘V’
+writeGraphDAPCSTP: no visible global function definition for ‘gsize’
+writeGraphDAPCSTP: no visible global function definition for
+  ‘as_edgelist’
+writeGraphDAPCSTP: no visible global function definition for
+  ‘write.table’
+Undefined global functions or variables:
+  %>% V V<- add_edges add_vertices as_edgelist brewer.pal coef
+  colorRampPalette curve delete_vertices density fitdistr fromJSON
+  graph_from_data_frame gsize hist image induced_subgraph is.directed
+  layout_nicely legend lines median mtext par plot plot.new read_graph
+  segments set_edge_attr set_vertex_attr simplify text toJSON
+  vertex_attr write.table x
+Consider adding
+  importFrom("grDevices", "colorRampPalette")
+  importFrom("graphics", "curve", "hist", "image", "legend", "lines",
+             "mtext", "par", "plot", "plot.new", "segments", "text")
+  importFrom("stats", "coef", "density", "median")
+  importFrom("utils", "write.table")
+to your NAMESPACE file.
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd line widths ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... WARNING
+Undocumented code objects:
+  ‘BUMdensity’ ‘FDR’ ‘FunctionalModuleComputation’
+  ‘FunctionalModuleComputationMD’ ‘calculatePrizeCollectingSteinerTree’
+  ‘colorbar’ ‘computeNodeScores’ ‘computedNodePositions’
+  ‘computedNodePositions2’ ‘detectFunctionalModule’ ‘e’ ‘e2’
+  ‘exportGraph’ ‘fitBUM’ ‘functionalModuleH1H3’
+  ‘functionalModuleH1H3_missingData’ ‘get_os’ ‘importGraph’ ‘loadPPIN’
+  ‘nodeScoreFunction’ ‘pValues’ ‘pValuesH1vsH3’ ‘pValuesRaw’
+  ‘plotFunctionalModule’ ‘ppin’ ‘readSTPoutfileMWCS’
+  ‘writeGraphDAPCSTP’ ‘writeHeaderDAPCSTP’
+All user-level objects in a package should have documentation entries.
+See chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+* checking for code/documentation mismatches ... WARNING
+Functions or methods with usage in documentation object 'hello' but not in code:
+  ‘hello’
+
+* checking Rd \usage sections ... OK
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking examples ... ERROR
+Running examples in ‘scPPIN-Ex.R’ failed
+The error most likely occurred in:
+
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: hello
+> ### Title: Hello, World!
+> ### Aliases: hello
+> 
+> ### ** Examples
+> 
+> hello()
+Error in hello() : could not find function "hello"
+Execution halted
+* DONE
+Status: 1 ERROR, 3 WARNINGs, 4 NOTEs

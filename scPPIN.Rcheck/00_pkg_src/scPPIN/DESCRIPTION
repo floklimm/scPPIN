@@ -1,0 +1,15 @@
+Package: scPPIN
+Type: Package
+Title: Identification of active modules through integration of
+        single-cell RNA seq dat with PPIN
+Version: 0.1.0
+Author: Authors@R: person("Florian", "Klimm", email = "f.klimm@gmail.com", role = c("aut", "cre"))
+Maintainer: Florian Klimm<f.klimm@gmail.com>
+Description: Allows the identification of active modules in PPINs. Does this by integrating single-cell RNA sequancing data as node weights onto the networks and then computing a maximum-weight connected subgraph. 
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Depends: igraph (>= 1.0.1), MASS (>= 7.3-51.3), RColorBrewer (>= 1.1),
+        qgraph (>= 1.6.1)
+NeedsCompilation: no
+Packaged: 2019-07-08 14:50:10 UTC; klimm

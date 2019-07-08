@@ -16,11 +16,11 @@ names(pValues) <- pValuesRaw$gene
 
 # 2) Run our algorithms
 FDR <- 10^{-2} # choose the false discovery rate
-#functionalModule <-detectFunctionalModule(ppin,pValues,FDR)
+functionalModule <-detectFunctionalModule(ppin,pValues,FDR)
 
 
 # 3) Plot the results
-#plotFunctionalModule(functionalModule,FDR)
+plotFunctionalModule(functionalModule,FDR)
 
 ### B) Larger, real-world example
 # 1) Load  data

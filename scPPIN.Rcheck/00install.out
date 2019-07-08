@@ -1,0 +1,98 @@
+* installing *source* package ‘scPPIN’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+[ [32mload[0m   ] [ [1m[30m  0.1 s[0m ] n  7294 m 266004 t  7274 integer 0 asym 0 bidir  1.00 ( [32mDAPCSTP_temp[0m ) ( best: [1m[93mN/A[0m )
+
+[ [32mprep[0m   ] [ [1m[30m  0.1 s[0m ] ( 100.0 % )
+
+                  sol            best    time    
+ *  1:    5349.158699     5349.158699 [ [1m[30m  0.0 s[0m ]
+    2:    5349.158699     5349.158699 [ [1m[30m  0.0 s[0m ]
+    3:    5351.326476     5349.158699 [ [1m[30m  0.2 s[0m ]
+    4:    5349.158699     5349.158699 [ [1m[30m  0.0 s[0m ]
+    5:    5358.074225     5349.158699 [ [1m[30m  0.1 s[0m ]
+    6:    5349.158699     5349.158699 [ [1m[30m  0.0 s[0m ]
+    7:    5349.158699     5349.158699 [ [1m[30m  0.0 s[0m ]
+    8:    5358.600309     5349.158699 [ [1m[30m  0.1 s[0m ]
+    9:    5358.761324     5349.158699 [ [1m[30m  0.0 s[0m ]
+   10:    5349.158699     5349.158699 [ [1m[30m  0.0 s[0m ]
+[ [32mheur 1[0m ] [ [1m[30m  0.6 s[0m ] ub 5349.158699
+
+ --- solved to optimality in root ( 0.0 sec. )
+[ [32mheur 2[0m ] [ [1m[30m  0.0 s[0m ] ub 5349.158699
+
+   root              lb              ub        n        m     gap   memory
+ --- no root remaining open
+[ [32mroot[0m   ] [ [1m[30m  0.0 s[0m ] gap  0.0000 % 120/68/0 lb 5349.158699 ub 5349.158699 avgn   0.0 avgm   0.0
+
+ --- solved to optimality in root ( 0.0 sec. )
+[ [32mbb[0m     ] [ [1m[30m  0.0 s[0m ] gap  0.0000 % lb 5349.158699 ub 5349.158699 bbnodes 0
+
+bbnodes                0
+ub           5349.158699
+lb           5349.158699
+rootub       5349.158699
+rootlb       5349.158699
+gap                0.000
+gapR               0.000
+timeBest             0.3
+time                 0.9
+matches                0
+valid                  1
+lc    45 d1    48 d2    19 ma    33 ms    46 ss     5 nr 75288 bb     0
+STAT;DAPCSTP_temp;7294;266004;0;0.000000;5349.158699;5349.158699;0.914;1;0;0
+Read 1 record
+Read 16 records
+[ [32mload[0m   ] [ [1m[30m  0.2 s[0m ] n 17309 m 593274 t 17289 integer 0 asym 0 bidir  1.00 ( [32mDAPCSTP_temp[0m ) ( best: [1m[93mN/A[0m )
+
+[ [32mprep[0m   ] [ [1m[30m  4.3 s[0m ] ( 100.0 % )
+
+                  sol            best    time    
+ *  1:   46529.874808    46529.874808 [ [1m[30m  0.1 s[0m ]
+ *  2:   46529.845674    46529.305854 [ [1m[30m  0.1 s[0m ]
+    3:   46534.244705    46529.305854 [ [1m[30m  1.3 s[0m ]
+    4:   46529.978284    46529.305854 [ [1m[30m  0.1 s[0m ]
+    5:   46539.063190    46529.305854 [ [1m[30m  0.4 s[0m ]
+ *  6:   46529.874808    46529.126078 [ [1m[30m  0.1 s[0m ]
+ *  7:   46529.684147    46529.115193 [ [1m[30m  0.1 s[0m ]
+    8:   46539.589274    46529.115193 [ [1m[30m  0.3 s[0m ]
+    9:   46539.750289    46529.115193 [ [1m[30m  0.1 s[0m ]
+   10:   46529.684147    46529.115193 [ [1m[30m  0.1 s[0m ]
+[ [32mheur 1[0m ] [ [1m[30m  2.6 s[0m ] ub 46529.115193
+
+  nodes  depth   open d       nodelb            lb            ub        n        m  action       gap
+      1      1      2 1 46529.115193  46529.115193  46529.115193       17       45 (branch)  0.00000 %
+ --- solved to optimality ( 0.0 sec. )
+[ [32mheur 2[0m ] [ [1m[30m  0.0 s[0m ] ub 46529.115193
+
+   root              lb              ub        n        m     gap   memory
+ --- no root remaining open
+[ [32mroot[0m   ] [ [1m[30m  0.0 s[0m ] gap  0.0000 % 38/34/0 lb 46529.115193 ub 46529.115193 avgn   0.0 avgm   0.0
+
+ --- solved to optimality in root ( 0.0 sec. )
+[ [32mbb[0m     ] [ [1m[30m  0.0 s[0m ] gap  0.0000 % lb 46529.115193 ub 46529.115193 bbnodes 0
+
+bbnodes                0
+ub          46529.115193
+lb          46529.115193
+rootub      46529.115193
+rootlb      46529.115193
+gap                0.000
+gapR               0.000
+timeBest             6.8
+time                 7.4
+matches                0
+valid                  1
+lc   965 d1    39 d2   969 ma    34 ms    41 ss     6 nr 178925 bb    27
+STAT;DAPCSTP_temp;17309;593274;0;0.000000;46529.115193;46529.115193;7.370;1;0;0
+Read 1 record
+Read 20 records
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (scPPIN)

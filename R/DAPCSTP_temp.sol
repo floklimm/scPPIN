@@ -5,7 +5,7 @@ Version 1.0
 END
 
 SECTION Solutions
-Solution 46529.115193 7.832
+Solution 46529.115193 7.381
 END
 
 SECTION BestSolution
