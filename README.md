@@ -67,5 +67,11 @@ The function `functionalModuleH1H3_missingData` allows the computation of functi
 3. I receive a segmentation fault (Core Dumped) when executing `dapcstp`.
 > This should not happen. Most likely the input file given to `dapcstp` is not correctly formatted. Inspect the file and make sure that the file is correctly written (including End-of-File).
 
+4. I want to run it on a different organims than *Homo sapiens*.
+> In the folder `R/inst/extdata/morePPINs` you can find graphML files for all 68 organisms for which BioGRID data is available. Load them with the `biogridNetwork <- read_graph('./inst/extdata/morePPINs/ biogridSaccharomyces_cerevisiae_S288c3.5.169.tab2.txt.graphml', format='graphml')` command.
+
+5. I don't like BioGRID and would rather use my own PPIN.
+> You can construct your own network in the igraph format and use the provided functions. But it is important that the gene symbols are the same as the names of the nodes in the PPIN.
+
 ## License
 This project is licensed under the AGPL - see the [LICENSE](https://github.com/floklimm/scPPIN/blob/master/LICENSE) file for details.
