@@ -1,7 +1,7 @@
 # example script that demonstrates the usage of scPPIN
 
 # 1) Load the library
-#library(scPPIN)
+library(scPPIN)
 
 
 ### A) Small Example
