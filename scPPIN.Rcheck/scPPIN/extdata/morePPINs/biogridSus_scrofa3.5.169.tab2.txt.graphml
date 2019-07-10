@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+         http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<!-- Created by igraph -->
+  <key id="v_name" for="node" attr.name="name" attr.type="string"/>
+  <graph id="G" edgedefault="undirected">
+    <node id="n0">
+      <data key="v_name">ABAT</data>
+    </node>
+    <node id="n1">
+      <data key="v_name">AP1G1</data>
+    </node>
+    <node id="n2">
+      <data key="v_name">GGA2</data>
+    </node>
+    <node id="n3">
+      <data key="v_name">GGA1</data>
+    </node>
+    <node id="n4">
+      <data key="v_name">LOC100037957</data>
+    </node>
+    <node id="n5">
+      <data key="v_name">MYO6</data>
+    </node>
+    <node id="n6">
+      <data key="v_name">SUCLG1</data>
+    </node>
+    <node id="n7">
+      <data key="v_name">NR6A1</data>
+    </node>
+    <node id="n8">
+      <data key="v_name">PSMA1</data>
+    </node>
+    <node id="n9">
+      <data key="v_name">HSP90AA1</data>
+    </node>
+    <node id="n10">
+      <data key="v_name">NOS3</data>
+    </node>
+    <node id="n11">
+      <data key="v_name">PTGIS</data>
+    </node>
+    <node id="n12">
+      <data key="v_name">TBXAS1</data>
+    </node>
+    <node id="n13">
+      <data key="v_name">UBB</data>
+    </node>
+    <node id="n14">
+      <data key="v_name">TUBB2A</data>
+    </node>
+    <node id="n15">
+      <data key="v_name">GAB1</data>
+    </node>
+    <node id="n16">
+      <data key="v_name">PRKACA</data>
+    </node>
+    <node id="n17">
+      <data key="v_name">ALDH5A1</data>
+    </node>
+    <node id="n18">
+      <data key="v_name">CCDC91</data>
+    </node>
+    <node id="n19">
+      <data key="v_name">LOC100154987</data>
+    </node>
+    <node id="n20">
+      <data key="v_name">HEATR5B</data>
+    </node>
+    <node id="n21">
+      <data key="v_name">SYNRG</data>
+    </node>
+    <node id="n22">
+      <data key="v_name">RABEP1</data>
+    </node>
+    <node id="n23">
+      <data key="v_name">HSP70</data>
+    </node>
+    <node id="n24">
+      <data key="v_name">MYH2</data>
+    </node>
+    <node id="n25">
+      <data key="v_name">CALM1</data>
+    </node>
+    <node id="n26">
+      <data key="v_name">SUCLG2</data>
+    </node>
+    <node id="n27">
+      <data key="v_name">NCOR1</data>
+    </node>
+    <node id="n28">
+      <data key="v_name">RAP80</data>
+    </node>
+    <node id="n29">
+      <data key="v_name">PSMA3</data>
+    </node>
+    <node id="n30">
+      <data key="v_name">PSMA4</data>
+    </node>
+    <node id="n31">
+      <data key="v_name">PSMA5</data>
+    </node>
+    <node id="n32">
+      <data key="v_name">PSMA8</data>
+    </node>
+    <node id="n33">
+      <data key="v_name">PSMA7</data>
+    </node>
+    <node id="n34">
+      <data key="v_name">LOC100155139</data>
+    </node>
+    <node id="n35">
+      <data key="v_name">PSMB6</data>
+    </node>
+    <node id="n36">
+      <data key="v_name">AWN</data>
+    </node>
+    <node id="n37">
+      <data key="v_name">PSP-I</data>
+    </node>
+    <node id="n38">
+      <data key="v_name">SPMI</data>
+    </node>
+    <node id="n39">
+      <data key="v_name">BSP1</data>
+    </node>
+    <node id="n40">
+      <data key="v_name">ACRBP</data>
+    </node>
+    <node id="n41">
+      <data key="v_name">ADAM5</data>
+    </node>
+    <node id="n42">
+      <data key="v_name">LOC100525409</data>
+    </node>
+    <node id="n43">
+      <data key="v_name">MFGE8</data>
+    </node>
+    <node id="n44">
+      <data key="v_name">AQN-1</data>
+    </node>
+    <node id="n45">
+      <data key="v_name">UBR7</data>
+    </node>
+    <node id="n46">
+      <data key="v_name">ZP4</data>
+    </node>
+    <node id="n47">
+      <data key="v_name">MAPT</data>
+    </node>
+    <node id="n48">
+      <data key="v_name">DCTN1</data>
+    </node>
+    <node id="n49">
+      <data key="v_name">PTPN11</data>
+    </node>
+    <node id="n50">
+      <data key="v_name">PIK3R1</data>
+    </node>
+    <edge source="n0" target="n17">
+    </edge>
+    <edge source="n1" target="n18">
+    </edge>
+    <edge source="n1" target="n19">
+    </edge>
+    <edge source="n1" target="n20">
+    </edge>
+    <edge source="n1" target="n21">
+    </edge>
+    <edge source="n1" target="n22">
+    </edge>
+    <edge source="n1" target="n23">
+    </edge>
+    <edge source="n2" target="n18">
+    </edge>
+    <edge source="n2" target="n20">
+    </edge>
+    <edge source="n2" target="n21">
+    </edge>
+    <edge source="n2" target="n22">
+    </edge>
+    <edge source="n3" target="n18">
+    </edge>
+    <edge source="n3" target="n20">
+    </edge>
+    <edge source="n3" target="n21">
+    </edge>
+    <edge source="n4" target="n5">
+    </edge>
+    <edge source="n4" target="n24">
+    </edge>
+    <edge source="n5" target="n25">
+    </edge>
+    <edge source="n6" target="n26">
+    </edge>
+    <edge source="n7" target="n27">
+    </edge>
+    <edge source="n7" target="n28">
+    </edge>
+    <edge source="n8" target="n29">
+    </edge>
+    <edge source="n8" target="n30">
+    </edge>
+    <edge source="n8" target="n31">
+    </edge>
+    <edge source="n8" target="n32">
+    </edge>
+    <edge source="n8" target="n33">
+    </edge>
+    <edge source="n8" target="n34">
+    </edge>
+    <edge source="n8" target="n35">
+    </edge>
+    <edge source="n8" target="n36">
+    </edge>
+    <edge source="n8" target="n37">
+    </edge>
+    <edge source="n8" target="n38">
+    </edge>
+    <edge source="n8" target="n39">
+    </edge>
+    <edge source="n8" target="n40">
+    </edge>
+    <edge source="n8" target="n41">
+    </edge>
+    <edge source="n8" target="n42">
+    </edge>
+    <edge source="n8" target="n43">
+    </edge>
+    <edge source="n9" target="n10">
+    </edge>
+    <edge source="n9" target="n11">
+    </edge>
+    <edge source="n9" target="n12">
+    </edge>
+    <edge source="n10" target="n16">
+    </edge>
+    <edge source="n10" target="n49">
+    </edge>
+    <edge source="n13" target="n38">
+    </edge>
+    <edge source="n13" target="n44">
+    </edge>
+    <edge source="n13" target="n45">
+    </edge>
+    <edge source="n13" target="n46">
+    </edge>
+    <edge source="n14" target="n47">
+    </edge>
+    <edge source="n14" target="n48">
+    </edge>
+    <edge source="n15" target="n16">
+    </edge>
+    <edge source="n15" target="n49">
+    </edge>
+    <edge source="n15" target="n50">
+    </edge>
+    <edge source="n16" target="n49">
+    </edge>
+  </graph>
+</graphml>

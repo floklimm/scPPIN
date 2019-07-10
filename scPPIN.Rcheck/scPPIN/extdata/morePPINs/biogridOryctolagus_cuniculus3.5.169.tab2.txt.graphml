@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+         http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<!-- Created by igraph -->
+  <key id="v_name" for="node" attr.name="name" attr.type="string"/>
+  <graph id="G" edgedefault="undirected">
+    <node id="n0">
+      <data key="v_name">TNNT3</data>
+    </node>
+    <node id="n1">
+      <data key="v_name">TNNC2</data>
+    </node>
+    <node id="n2">
+      <data key="v_name">COL1A1</data>
+    </node>
+    <node id="n3">
+      <data key="v_name">COL1A2</data>
+    </node>
+    <node id="n4">
+      <data key="v_name">UBL4A</data>
+    </node>
+    <node id="n5">
+      <data key="v_name">HK1</data>
+    </node>
+    <node id="n6">
+      <data key="v_name">ACTB</data>
+    </node>
+    <node id="n7">
+      <data key="v_name">ATP4B</data>
+    </node>
+    <node id="n8">
+      <data key="v_name">HSP90AA1</data>
+    </node>
+    <node id="n9">
+      <data key="v_name">PPID</data>
+    </node>
+    <node id="n10">
+      <data key="v_name">FKBP4</data>
+    </node>
+    <node id="n11">
+      <data key="v_name">KATNA1</data>
+    </node>
+    <node id="n12">
+      <data key="v_name">TMED10</data>
+    </node>
+    <node id="n13">
+      <data key="v_name">YBX1</data>
+    </node>
+    <node id="n14">
+      <data key="v_name">MYCBP2</data>
+    </node>
+    <node id="n15">
+      <data key="v_name">UBA1</data>
+    </node>
+    <node id="n16">
+      <data key="v_name">CYP2C2</data>
+    </node>
+    <node id="n17">
+      <data key="v_name">CYP2C1</data>
+    </node>
+    <node id="n18">
+      <data key="v_name">PRKCG</data>
+    </node>
+    <node id="n19">
+      <data key="v_name">RYR1</data>
+    </node>
+    <node id="n20">
+      <data key="v_name">CACNA1A</data>
+    </node>
+    <node id="n21">
+      <data key="v_name">CACNA1S</data>
+    </node>
+    <node id="n22">
+      <data key="v_name">TNNC1</data>
+    </node>
+    <node id="n23">
+      <data key="v_name">TNNI2</data>
+    </node>
+    <node id="n24">
+      <data key="v_name">P4HB</data>
+    </node>
+    <node id="n25">
+      <data key="v_name">LOC100342501</data>
+    </node>
+    <node id="n26">
+      <data key="v_name">GSN</data>
+    </node>
+    <node id="n27">
+      <data key="v_name">ATP4A</data>
+    </node>
+    <node id="n28">
+      <data key="v_name">LOC100354037</data>
+    </node>
+    <node id="n29">
+      <data key="v_name">UBE2B</data>
+    </node>
+    <node id="n30">
+      <data key="v_name">UBE2R2</data>
+    </node>
+    <node id="n31">
+      <data key="v_name">GJA1</data>
+    </node>
+    <node id="n32">
+      <data key="v_name">CACNB3</data>
+    </node>
+    <node id="n33">
+      <data key="v_name">CACNB2</data>
+    </node>
+    <node id="n34">
+      <data key="v_name">CACNB1</data>
+    </node>
+    <node id="n35">
+      <data key="v_name">CACNB4</data>
+    </node>
+    <edge source="n0" target="n1">
+    </edge>
+    <edge source="n0" target="n22">
+    </edge>
+    <edge source="n0" target="n23">
+    </edge>
+    <edge source="n1" target="n23">
+    </edge>
+    <edge source="n2" target="n4">
+    </edge>
+    <edge source="n2" target="n24">
+    </edge>
+    <edge source="n3" target="n4">
+    </edge>
+    <edge source="n3" target="n24">
+    </edge>
+    <edge source="n5" target="n25">
+    </edge>
+    <edge source="n6" target="n26">
+    </edge>
+    <edge source="n7" target="n27">
+    </edge>
+    <edge source="n8" target="n9">
+    </edge>
+    <edge source="n8" target="n10">
+    </edge>
+    <edge source="n8" target="n11">
+    </edge>
+    <edge source="n8" target="n12">
+    </edge>
+    <edge source="n8" target="n13">
+    </edge>
+    <edge source="n8" target="n28">
+    </edge>
+    <edge source="n9" target="n13">
+    </edge>
+    <edge source="n14" target="n29">
+    </edge>
+    <edge source="n15" target="n30">
+    </edge>
+    <edge source="n16" target="n17">
+    </edge>
+    <edge source="n18" target="n31">
+    </edge>
+    <edge source="n19" target="n21">
+    </edge>
+    <edge source="n20" target="n32">
+    </edge>
+    <edge source="n20" target="n33">
+    </edge>
+    <edge source="n20" target="n34">
+    </edge>
+    <edge source="n20" target="n35">
+    </edge>
+  </graph>
+</graphml>

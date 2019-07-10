@@ -23,17 +23,16 @@ See section ‘Package structure’ in the ‘Writing R Extensions’ manual.
 * checking serialization versions ... OK
 * checking whether package ‘scPPIN’ can be installed ... OK
 * checking installed package size ... NOTE
-  installed size is 21.4Mb
+  installed size is 82.9Mb
   sub-directories of 1Mb or more:
-    R         5.1Mb
-    extdata  16.3Mb
+    extdata  82.8Mb
 * checking package directory ... OK
 * checking for future file timestamps ... OK
 * checking DESCRIPTION meta-information ... OK
 * checking top-level files ... NOTE
 Non-standard files/directories found at top level:
   ‘DAPCSTP_temp.sol’ ‘DAPCSTP_temp.stp’ ‘Rplots.pdf’ ‘dapcstp’
-  ‘dapcstpMAC’
+  ‘dapcstpMAC’ ‘tutorial_scPPIN.R’
 * checking for left-over files ... OK
 * checking index information ... OK
 * checking package subdirectories ... OK
@@ -90,8 +89,6 @@ detectFunctionalModule: no visible global function definition for
 detectFunctionalModule: no visible global function definition for
   ‘delete_vertices’
 detectFunctionalModule: no visible global function definition for ‘V<-’
-exportGraph: no visible global function definition for ‘is.directed’
-exportGraph: no visible global function definition for ‘toJSON’
 fitBUM: no visible global function definition for ‘fitdistr’
 fitBUM: no visible global function definition for ‘plot.new’
 fitBUM: no visible global function definition for ‘par’
@@ -104,9 +101,6 @@ fitBUM: no visible global function definition for ‘coef’
 fitBUM: no visible global function definition for ‘segments’
 fitBUM: no visible global function definition for ‘legend’
 fitBUM: no visible global function definition for ‘text’
-importGraph: no visible global function definition for ‘fromJSON’
-importGraph: no visible global function definition for
-  ‘graph_from_data_frame’
 loadPPIN: no visible global function definition for ‘read_graph’
 loadPPIN: no visible global function definition for ‘simplify’
 plotFunctionalModule: no visible global function definition for
@@ -130,11 +124,10 @@ writeGraphDAPCSTP: no visible global function definition for
   ‘write.table’
 Undefined global functions or variables:
   %>% V V<- add_edges add_vertices as_edgelist brewer.pal coef
-  colorRampPalette curve delete_vertices density fitdistr fromJSON
-  graph_from_data_frame gsize hist image induced_subgraph is.directed
-  layout_nicely legend lines median mtext par plot plot.new read_graph
-  segments set_edge_attr set_vertex_attr simplify text toJSON
-  vertex_attr write.table x
+  colorRampPalette curve delete_vertices density fitdistr gsize hist
+  image induced_subgraph layout_nicely legend lines median mtext par
+  plot plot.new read_graph segments set_edge_attr set_vertex_attr
+  simplify text vertex_attr write.table x
 Consider adding
   importFrom("grDevices", "colorRampPalette")
   importFrom("graphics", "curve", "hist", "image", "legend", "lines",
@@ -142,44 +135,16 @@ Consider adding
   importFrom("stats", "coef", "density", "median")
   importFrom("utils", "write.table")
 to your NAMESPACE file.
-* checking Rd files ... OK
-* checking Rd metadata ... OK
-* checking Rd line widths ... OK
-* checking Rd cross-references ... OK
 * checking for missing documentation entries ... WARNING
 Undocumented code objects:
-  ‘BUMdensity’ ‘FDR’ ‘FunctionalModuleComputation’
+  ‘BUMdensity’ ‘BUMdensityCummulative’ ‘FunctionalModuleComputation’
   ‘FunctionalModuleComputationMD’ ‘calculatePrizeCollectingSteinerTree’
-  ‘colorbar’ ‘computeNodeScores’ ‘computedNodePositions’
-  ‘computedNodePositions2’ ‘detectFunctionalModule’ ‘e’ ‘e2’
-  ‘exportGraph’ ‘fitBUM’ ‘functionalModuleH1H3’
-  ‘functionalModuleH1H3_missingData’ ‘get_os’ ‘importGraph’ ‘loadPPIN’
-  ‘nodeScoreFunction’ ‘pValues’ ‘pValuesH1vsH3’ ‘pValuesRaw’
-  ‘plotFunctionalModule’ ‘ppin’ ‘readSTPoutfileMWCS’
-  ‘writeGraphDAPCSTP’ ‘writeHeaderDAPCSTP’
+  ‘colorbar’ ‘computeNodeScores’ ‘detectFunctionalModule’ ‘fitBUM’
+  ‘get_os’ ‘loadPPIN’ ‘nodeScoreFunction’ ‘plotFunctionalModule’
+  ‘readSTPoutfileMWCS’ ‘writeGraphDAPCSTP’ ‘writeHeaderDAPCSTP’
 All user-level objects in a package should have documentation entries.
 See chapter ‘Writing R documentation files’ in the ‘Writing R
 Extensions’ manual.
-* checking for code/documentation mismatches ... WARNING
-Functions or methods with usage in documentation object 'hello' but not in code:
-  ‘hello’
-
-* checking Rd \usage sections ... OK
-* checking Rd contents ... OK
-* checking for unstated dependencies in examples ... OK
-* checking examples ... ERROR
-Running examples in ‘scPPIN-Ex.R’ failed
-The error most likely occurred in:
-
-> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
-> ### Name: hello
-> ### Title: Hello, World!
-> ### Aliases: hello
-> 
-> ### ** Examples
-> 
-> hello()
-Error in hello() : could not find function "hello"
-Execution halted
+* checking examples ... NONE
 * DONE
-Status: 1 ERROR, 3 WARNINGs, 4 NOTEs
+Status: 2 WARNINGs, 4 NOTEs

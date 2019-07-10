@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+         http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<!-- Created by igraph -->
+  <key id="v_name" for="node" attr.name="name" attr.type="string"/>
+  <graph id="G" edgedefault="undirected">
+    <node id="n0">
+      <data key="v_name">hypB</data>
+    </node>
+    <node id="n1">
+      <data key="v_name">fdnH</data>
+    </node>
+    <node id="n2">
+      <data key="v_name">fdoH</data>
+    </node>
+    <node id="n3">
+      <data key="v_name">fdnG</data>
+    </node>
+    <node id="n4">
+      <data key="v_name">fdoG</data>
+    </node>
+    <node id="n5">
+      <data key="v_name">hypA</data>
+    </node>
+    <node id="n6">
+      <data key="v_name">skp</data>
+    </node>
+    <node id="n7">
+      <data key="v_name">oppA</data>
+    </node>
+    <node id="n8">
+      <data key="v_name">tolB</data>
+    </node>
+    <node id="n9">
+      <data key="v_name">erfK</data>
+    </node>
+    <edge source="n0" target="n5">
+    </edge>
+    <edge source="n1" target="n6">
+    </edge>
+    <edge source="n1" target="n8">
+    </edge>
+    <edge source="n2" target="n6">
+    </edge>
+    <edge source="n3" target="n7">
+    </edge>
+    <edge source="n3" target="n8">
+    </edge>
+    <edge source="n3" target="n9">
+    </edge>
+    <edge source="n4" target="n7">
+    </edge>
+  </graph>
+</graphml>

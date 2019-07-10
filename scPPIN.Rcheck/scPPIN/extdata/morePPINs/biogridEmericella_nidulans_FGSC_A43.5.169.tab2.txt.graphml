@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+         http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<!-- Created by igraph -->
+  <key id="v_name" for="node" attr.name="name" attr.type="string"/>
+  <graph id="G" edgedefault="undirected">
+    <node id="n0">
+      <data key="v_name">AN7821.2</data>
+    </node>
+    <node id="n1">
+      <data key="v_name">AN6197.2</data>
+    </node>
+    <node id="n2">
+      <data key="v_name">AN6125.2</data>
+    </node>
+    <node id="n3">
+      <data key="v_name">AN4761.2</data>
+    </node>
+    <node id="n4">
+      <data key="v_name">AN5105.2</data>
+    </node>
+    <node id="n5">
+      <data key="v_name">AN5973.2</data>
+    </node>
+    <node id="n6">
+      <data key="v_name">AN3719.2</data>
+    </node>
+    <node id="n7">
+      <data key="v_name">AN1052.2</data>
+    </node>
+    <node id="n8">
+      <data key="v_name">AN3422.2</data>
+    </node>
+    <node id="n9">
+      <data key="v_name">AN7252.2</data>
+    </node>
+    <node id="n10">
+      <data key="v_name">AN2269.2</data>
+    </node>
+    <node id="n11">
+      <data key="v_name">AN1191.2</data>
+    </node>
+    <node id="n12">
+      <data key="v_name">AN7425.2</data>
+    </node>
+    <node id="n13">
+      <data key="v_name">AN1459.2</data>
+    </node>
+    <node id="n14">
+      <data key="v_name">AN4332.2</data>
+    </node>
+    <node id="n15">
+      <data key="v_name">AN2290.2</data>
+    </node>
+    <node id="n16">
+      <data key="v_name">AN0807.2</data>
+    </node>
+    <node id="n17">
+      <data key="v_name">AN1959.2</data>
+    </node>
+    <node id="n18">
+      <data key="v_name">AN0363.2</data>
+    </node>
+    <node id="n19">
+      <data key="v_name">AN2142.2</data>
+    </node>
+    <node id="n20">
+      <data key="v_name">AN2298.2</data>
+    </node>
+    <node id="n21">
+      <data key="v_name">AN4399.2</data>
+    </node>
+    <node id="n22">
+      <data key="v_name">AN4869.2</data>
+    </node>
+    <node id="n23">
+      <data key="v_name">AN5784.2</data>
+    </node>
+    <node id="n24">
+      <data key="v_name">AN5872.2</data>
+    </node>
+    <node id="n25">
+      <data key="v_name">AN6547.2</data>
+    </node>
+    <node id="n26">
+      <data key="v_name">AN2174.2</data>
+    </node>
+    <node id="n27">
+      <data key="v_name">AN0253.2</data>
+    </node>
+    <node id="n28">
+      <data key="v_name">AN0440.2</data>
+    </node>
+    <node id="n29">
+      <data key="v_name">AN0668.2</data>
+    </node>
+    <node id="n30">
+      <data key="v_name">AN0671.2</data>
+    </node>
+    <node id="n31">
+      <data key="v_name">AN0976.2</data>
+    </node>
+    <node id="n32">
+      <data key="v_name">AN1060.2</data>
+    </node>
+    <node id="n33">
+      <data key="v_name">AN1546.2</data>
+    </node>
+    <node id="n34">
+      <data key="v_name">AN2141.2</data>
+    </node>
+    <node id="n35">
+      <data key="v_name">AN2181.2</data>
+    </node>
+    <node id="n36">
+      <data key="v_name">AN2415.2</data>
+    </node>
+    <node id="n37">
+      <data key="v_name">AN2769.2</data>
+    </node>
+    <node id="n38">
+      <data key="v_name">AN3621.2</data>
+    </node>
+    <node id="n39">
+      <data key="v_name">AN3688.2</data>
+    </node>
+    <node id="n40">
+      <data key="v_name">AN3907.2</data>
+    </node>
+    <node id="n41">
+      <data key="v_name">AN4445.2</data>
+    </node>
+    <node id="n42">
+      <data key="v_name">AN4894.2</data>
+    </node>
+    <node id="n43">
+      <data key="v_name">AN5498.2</data>
+    </node>
+    <node id="n44">
+      <data key="v_name">AN6505.2</data>
+    </node>
+    <node id="n45">
+      <data key="v_name">AN7170.2</data>
+    </node>
+    <node id="n46">
+      <data key="v_name">AN7608.2</data>
+    </node>
+    <node id="n47">
+      <data key="v_name">AN9399.2</data>
+    </node>
+    <node id="n48">
+      <data key="v_name">AN9538.2</data>
+    </node>
+    <node id="n49">
+      <data key="v_name">AN0161.2</data>
+    </node>
+    <node id="n50">
+      <data key="v_name">AN1635.2</data>
+    </node>
+    <node id="n51">
+      <data key="v_name">AN3082.2</data>
+    </node>
+    <node id="n52">
+      <data key="v_name">AN5124.2</data>
+    </node>
+    <node id="n53">
+      <data key="v_name">AN0241.2</data>
+    </node>
+    <node id="n54">
+      <data key="v_name">AN0554.2</data>
+    </node>
+    <node id="n55">
+      <data key="v_name">AN4258.2</data>
+    </node>
+    <node id="n56">
+      <data key="v_name">AN1466.2</data>
+    </node>
+    <node id="n57">
+      <data key="v_name">AN3038.2</data>
+    </node>
+    <node id="n58">
+      <data key="v_name">AN4622.2</data>
+    </node>
+    <node id="n59">
+      <data key="v_name">AN4705.2</data>
+    </node>
+    <node id="n60">
+      <data key="v_name">AN5212.2</data>
+    </node>
+    <node id="n61">
+      <data key="v_name">AN5532.2</data>
+    </node>
+    <node id="n62">
+      <data key="v_name">AN6560.2</data>
+    </node>
+    <node id="n63">
+      <data key="v_name">AN9087.2</data>
+    </node>
+    <edge source="n0" target="n12">
+    </edge>
+    <edge source="n1" target="n2">
+    </edge>
+    <edge source="n3" target="n4">
+    </edge>
+    <edge source="n3" target="n13">
+    </edge>
+    <edge source="n4" target="n13">
+    </edge>
+    <edge source="n5" target="n14">
+    </edge>
+    <edge source="n6" target="n7">
+    </edge>
+    <edge source="n6" target="n8">
+    </edge>
+    <edge source="n6" target="n9">
+    </edge>
+    <edge source="n6" target="n15">
+    </edge>
+    <edge source="n6" target="n16">
+    </edge>
+    <edge source="n6" target="n17">
+    </edge>
+    <edge source="n7" target="n16">
+    </edge>
+    <edge source="n7" target="n18">
+    </edge>
+    <edge source="n7" target="n19">
+    </edge>
+    <edge source="n8" target="n9">
+    </edge>
+    <edge source="n8" target="n10">
+    </edge>
+    <edge source="n9" target="n10">
+    </edge>
+    <edge source="n11" target="n20">
+    </edge>
+    <edge source="n11" target="n21">
+    </edge>
+    <edge source="n11" target="n22">
+    </edge>
+    <edge source="n11" target="n23">
+    </edge>
+    <edge source="n11" target="n24">
+    </edge>
+    <edge source="n11" target="n25">
+    </edge>
+    <edge source="n11" target="n26">
+    </edge>
+    <edge source="n11" target="n27">
+    </edge>
+    <edge source="n11" target="n28">
+    </edge>
+    <edge source="n11" target="n29">
+    </edge>
+    <edge source="n11" target="n30">
+    </edge>
+    <edge source="n11" target="n31">
+    </edge>
+    <edge source="n11" target="n32">
+    </edge>
+    <edge source="n11" target="n33">
+    </edge>
+    <edge source="n11" target="n34">
+    </edge>
+    <edge source="n11" target="n35">
+    </edge>
+    <edge source="n11" target="n36">
+    </edge>
+    <edge source="n11" target="n37">
+    </edge>
+    <edge source="n11" target="n38">
+    </edge>
+    <edge source="n11" target="n39">
+    </edge>
+    <edge source="n11" target="n40">
+    </edge>
+    <edge source="n11" target="n41">
+    </edge>
+    <edge source="n11" target="n42">
+    </edge>
+    <edge source="n11" target="n43">
+    </edge>
+    <edge source="n11" target="n44">
+    </edge>
+    <edge source="n11" target="n45">
+    </edge>
+    <edge source="n11" target="n46">
+    </edge>
+    <edge source="n11" target="n47">
+    </edge>
+    <edge source="n11" target="n48">
+    </edge>
+    <edge source="n11" target="n49">
+    </edge>
+    <edge source="n11" target="n50">
+    </edge>
+    <edge source="n11" target="n51">
+    </edge>
+    <edge source="n11" target="n52">
+    </edge>
+    <edge source="n11" target="n53">
+    </edge>
+    <edge source="n11" target="n54">
+    </edge>
+    <edge source="n11" target="n55">
+    </edge>
+    <edge source="n11" target="n56">
+    </edge>
+    <edge source="n11" target="n57">
+    </edge>
+    <edge source="n11" target="n58">
+    </edge>
+    <edge source="n11" target="n59">
+    </edge>
+    <edge source="n11" target="n60">
+    </edge>
+    <edge source="n11" target="n61">
+    </edge>
+    <edge source="n11" target="n62">
+    </edge>
+    <edge source="n11" target="n63">
+    </edge>
+  </graph>
+</graphml>

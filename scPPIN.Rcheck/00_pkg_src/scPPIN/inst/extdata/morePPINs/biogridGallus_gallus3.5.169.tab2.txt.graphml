@@ -1,0 +1,1640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+         http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<!-- Created by igraph -->
+  <key id="v_name" for="node" attr.name="name" attr.type="string"/>
+  <graph id="G" edgedefault="undirected">
+    <node id="n0">
+      <data key="v_name">VSNL1</data>
+    </node>
+    <node id="n1">
+      <data key="v_name">NUDT16L1</data>
+    </node>
+    <node id="n2">
+      <data key="v_name">PXN</data>
+    </node>
+    <node id="n3">
+      <data key="v_name">REV1</data>
+    </node>
+    <node id="n4">
+      <data key="v_name">PCNA</data>
+    </node>
+    <node id="n5">
+      <data key="v_name">CRK</data>
+    </node>
+    <node id="n6">
+      <data key="v_name">FANCC</data>
+    </node>
+    <node id="n7">
+      <data key="v_name">FANCL</data>
+    </node>
+    <node id="n8">
+      <data key="v_name">ACTA1</data>
+    </node>
+    <node id="n9">
+      <data key="v_name">SSRP1</data>
+    </node>
+    <node id="n10">
+      <data key="v_name">CENPA</data>
+    </node>
+    <node id="n11">
+      <data key="v_name">HIRA</data>
+    </node>
+    <node id="n12">
+      <data key="v_name">GATA1</data>
+    </node>
+    <node id="n13">
+      <data key="v_name">YY1</data>
+    </node>
+    <node id="n14">
+      <data key="v_name">SP1</data>
+    </node>
+    <node id="n15">
+      <data key="v_name">RBL1</data>
+    </node>
+    <node id="n16">
+      <data key="v_name">E2F4</data>
+    </node>
+    <node id="n17">
+      <data key="v_name">RBBP4</data>
+    </node>
+    <node id="n18">
+      <data key="v_name">HDAC1</data>
+    </node>
+    <node id="n19">
+      <data key="v_name">HDAC2</data>
+    </node>
+    <node id="n20">
+      <data key="v_name">SMC5</data>
+    </node>
+    <node id="n21">
+      <data key="v_name">CHAF1A</data>
+    </node>
+    <node id="n22">
+      <data key="v_name">FANCD2</data>
+    </node>
+    <node id="n23">
+      <data key="v_name">BLM</data>
+    </node>
+    <node id="n24">
+      <data key="v_name">HIST1H2A4</data>
+    </node>
+    <node id="n25">
+      <data key="v_name">HIST1H2B7</data>
+    </node>
+    <node id="n26">
+      <data key="v_name">H2AFZ</data>
+    </node>
+    <node id="n27">
+      <data key="v_name">BLNK</data>
+    </node>
+    <node id="n28">
+      <data key="v_name">CMTM3</data>
+    </node>
+    <node id="n29">
+      <data key="v_name">CENPI</data>
+    </node>
+    <node id="n30">
+      <data key="v_name">CENPH</data>
+    </node>
+    <node id="n31">
+      <data key="v_name">NUF2</data>
+    </node>
+    <node id="n32">
+      <data key="v_name">NDC80</data>
+    </node>
+    <node id="n33">
+      <data key="v_name">KCNMA1</data>
+    </node>
+    <node id="n34">
+      <data key="v_name">YWHAG</data>
+    </node>
+    <node id="n35">
+      <data key="v_name">HPCAL1</data>
+    </node>
+    <node id="n36">
+      <data key="v_name">SNAP25</data>
+    </node>
+    <node id="n37">
+      <data key="v_name">ANXA5</data>
+    </node>
+    <node id="n38">
+      <data key="v_name">HSPD1</data>
+    </node>
+    <node id="n39">
+      <data key="v_name">LIN7B</data>
+    </node>
+    <node id="n40">
+      <data key="v_name">SOD1</data>
+    </node>
+    <node id="n41">
+      <data key="v_name">CTTN</data>
+    </node>
+    <node id="n42">
+      <data key="v_name">HSPA2</data>
+    </node>
+    <node id="n43">
+      <data key="v_name">PHB</data>
+    </node>
+    <node id="n44">
+      <data key="v_name">STMN1</data>
+    </node>
+    <node id="n45">
+      <data key="v_name">HSPA5</data>
+    </node>
+    <node id="n46">
+      <data key="v_name">HSP90AB1</data>
+    </node>
+    <node id="n47">
+      <data key="v_name">RAP1A</data>
+    </node>
+    <node id="n48">
+      <data key="v_name">LMNB1</data>
+    </node>
+    <node id="n49">
+      <data key="v_name">VCP</data>
+    </node>
+    <node id="n50">
+      <data key="v_name">AKT1</data>
+    </node>
+    <node id="n51">
+      <data key="v_name">GSK3B</data>
+    </node>
+    <node id="n52">
+      <data key="v_name">PDK1</data>
+    </node>
+    <node id="n53">
+      <data key="v_name">SMAD2</data>
+    </node>
+    <node id="n54">
+      <data key="v_name">SMAD3</data>
+    </node>
+    <node id="n55">
+      <data key="v_name">WRNIP1</data>
+    </node>
+    <node id="n56">
+      <data key="v_name">TP53BP1</data>
+    </node>
+    <node id="n57">
+      <data key="v_name">RNF13</data>
+    </node>
+    <node id="n58">
+      <data key="v_name">HSF1</data>
+    </node>
+    <node id="n59">
+      <data key="v_name">SYK</data>
+    </node>
+    <node id="n60">
+      <data key="v_name">PTPN1</data>
+    </node>
+    <node id="n61">
+      <data key="v_name">PGR</data>
+    </node>
+    <node id="n62">
+      <data key="v_name">NACA</data>
+    </node>
+    <node id="n63">
+      <data key="v_name">PPP1CB</data>
+    </node>
+    <node id="n64">
+      <data key="v_name">HSP90AA1</data>
+    </node>
+    <node id="n65">
+      <data key="v_name">ASF1A</data>
+    </node>
+    <node id="n66">
+      <data key="v_name">EBF1</data>
+    </node>
+    <node id="n67">
+      <data key="v_name">HES4</data>
+    </node>
+    <node id="n68">
+      <data key="v_name">SAP18</data>
+    </node>
+    <node id="n69">
+      <data key="v_name">HOXA2</data>
+    </node>
+    <node id="n70">
+      <data key="v_name">LRP8</data>
+    </node>
+    <node id="n71">
+      <data key="v_name">VLDLR</data>
+    </node>
+    <node id="n72">
+      <data key="v_name">A2M</data>
+    </node>
+    <node id="n73">
+      <data key="v_name">NMT1</data>
+    </node>
+    <node id="n74">
+      <data key="v_name">NMT2</data>
+    </node>
+    <node id="n75">
+      <data key="v_name">RAD17</data>
+    </node>
+    <node id="n76">
+      <data key="v_name">RBBP8</data>
+    </node>
+    <node id="n77">
+      <data key="v_name">FANCM</data>
+    </node>
+    <node id="n78">
+      <data key="v_name">FANCI</data>
+    </node>
+    <node id="n79">
+      <data key="v_name">SRC</data>
+    </node>
+    <node id="n80">
+      <data key="v_name">TNNC1</data>
+    </node>
+    <node id="n81">
+      <data key="v_name">BRAF</data>
+    </node>
+    <node id="n82">
+      <data key="v_name">RAD51</data>
+    </node>
+    <node id="n83">
+      <data key="v_name">CNTN1</data>
+    </node>
+    <node id="n84">
+      <data key="v_name">PTPRA</data>
+    </node>
+    <node id="n85">
+      <data key="v_name">HBEGF</data>
+    </node>
+    <node id="n86">
+      <data key="v_name">CNIH2</data>
+    </node>
+    <node id="n87">
+      <data key="v_name">ITGAV</data>
+    </node>
+    <node id="n88">
+      <data key="v_name">ITGB3</data>
+    </node>
+    <node id="n89">
+      <data key="v_name">ACTB</data>
+    </node>
+    <node id="n90">
+      <data key="v_name">VCL</data>
+    </node>
+    <node id="n91">
+      <data key="v_name">PTK2</data>
+    </node>
+    <node id="n92">
+      <data key="v_name">CBL</data>
+    </node>
+    <node id="n93">
+      <data key="v_name">FANCB</data>
+    </node>
+    <node id="n94">
+      <data key="v_name">FANCG</data>
+    </node>
+    <node id="n95">
+      <data key="v_name">FANCF</data>
+    </node>
+    <node id="n96">
+      <data key="v_name">LOC374195</data>
+    </node>
+    <node id="n97">
+      <data key="v_name">RBL2</data>
+    </node>
+    <node id="n98">
+      <data key="v_name">XRCC6</data>
+    </node>
+    <node id="n99">
+      <data key="v_name">HDAC3</data>
+    </node>
+    <node id="n100">
+      <data key="v_name">UBC</data>
+    </node>
+    <node id="n101">
+      <data key="v_name">CENPO</data>
+    </node>
+    <node id="n102">
+      <data key="v_name">CENPL</data>
+    </node>
+    <node id="n103">
+      <data key="v_name">CENPP</data>
+    </node>
+    <node id="n104">
+      <data key="v_name">CENPK</data>
+    </node>
+    <node id="n105">
+      <data key="v_name">CENPM</data>
+    </node>
+    <node id="n106">
+      <data key="v_name">ATP1A1</data>
+    </node>
+    <node id="n107">
+      <data key="v_name">TUBA3E</data>
+    </node>
+    <node id="n108">
+      <data key="v_name">NEFM</data>
+    </node>
+    <node id="n109">
+      <data key="v_name">HSPA8</data>
+    </node>
+    <node id="n110">
+      <data key="v_name">NEFL</data>
+    </node>
+    <node id="n111">
+      <data key="v_name">STUB1</data>
+    </node>
+    <node id="n112">
+      <data key="v_name">TUBB1</data>
+    </node>
+    <node id="n113">
+      <data key="v_name">ATP5B</data>
+    </node>
+    <node id="n114">
+      <data key="v_name">ACTN1</data>
+    </node>
+    <node id="n115">
+      <data key="v_name">GOT2</data>
+    </node>
+    <node id="n116">
+      <data key="v_name">TECTB</data>
+    </node>
+    <node id="n117">
+      <data key="v_name">COPS4</data>
+    </node>
+    <node id="n118">
+      <data key="v_name">GNB1</data>
+    </node>
+    <node id="n119">
+      <data key="v_name">YWHAE</data>
+    </node>
+    <node id="n120">
+      <data key="v_name">CAPZA2</data>
+    </node>
+    <node id="n121">
+      <data key="v_name">COL2A1</data>
+    </node>
+    <node id="n122">
+      <data key="v_name">YWHAZ</data>
+    </node>
+    <node id="n123">
+      <data key="v_name">MPZL1</data>
+    </node>
+    <node id="n124">
+      <data key="v_name">CHP1</data>
+    </node>
+    <node id="n125">
+      <data key="v_name">APOA1</data>
+    </node>
+    <node id="n126">
+      <data key="v_name">HEBP1</data>
+    </node>
+    <node id="n127">
+      <data key="v_name">NDUFV2</data>
+    </node>
+    <node id="n128">
+      <data key="v_name">RHOA</data>
+    </node>
+    <node id="n129">
+      <data key="v_name">HSPB1</data>
+    </node>
+    <node id="n130">
+      <data key="v_name">MESDC2</data>
+    </node>
+    <node id="n131">
+      <data key="v_name">PDCD10</data>
+    </node>
+    <node id="n132">
+      <data key="v_name">C5H14ORF166</data>
+    </node>
+    <node id="n133">
+      <data key="v_name">YWHAQ</data>
+    </node>
+    <node id="n134">
+      <data key="v_name">YWHAB</data>
+    </node>
+    <node id="n135">
+      <data key="v_name">CALB2</data>
+    </node>
+    <node id="n136">
+      <data key="v_name">VDAC1</data>
+    </node>
+    <node id="n137">
+      <data key="v_name">HMGCL</data>
+    </node>
+    <node id="n138">
+      <data key="v_name">ERP29</data>
+    </node>
+    <node id="n139">
+      <data key="v_name">VDAC2</data>
+    </node>
+    <node id="n140">
+      <data key="v_name">NCALD</data>
+    </node>
+    <node id="n141">
+      <data key="v_name">PFN2</data>
+    </node>
+    <node id="n142">
+      <data key="v_name">HSP90B1</data>
+    </node>
+    <node id="n143">
+      <data key="v_name">FH</data>
+    </node>
+    <node id="n144">
+      <data key="v_name">EEF1A1</data>
+    </node>
+    <node id="n145">
+      <data key="v_name">GSN</data>
+    </node>
+    <node id="n146">
+      <data key="v_name">SERPINH1</data>
+    </node>
+    <node id="n147">
+      <data key="v_name">HNRNPA2B1</data>
+    </node>
+    <node id="n148">
+      <data key="v_name">DSTN</data>
+    </node>
+    <node id="n149">
+      <data key="v_name">IDH2</data>
+    </node>
+    <node id="n150">
+      <data key="v_name">LOC430766</data>
+    </node>
+    <node id="n151">
+      <data key="v_name">TF</data>
+    </node>
+    <node id="n152">
+      <data key="v_name">COL1A1</data>
+    </node>
+    <node id="n153">
+      <data key="v_name">DPYSL2</data>
+    </node>
+    <node id="n154">
+      <data key="v_name">ARCN1</data>
+    </node>
+    <node id="n155">
+      <data key="v_name">ALB</data>
+    </node>
+    <node id="n156">
+      <data key="v_name">ENO2</data>
+    </node>
+    <node id="n157">
+      <data key="v_name">DCTN2</data>
+    </node>
+    <node id="n158">
+      <data key="v_name">ACTG2</data>
+    </node>
+    <node id="n159">
+      <data key="v_name">ENO1</data>
+    </node>
+    <node id="n160">
+      <data key="v_name">CKB</data>
+    </node>
+    <node id="n161">
+      <data key="v_name">ATP5A1</data>
+    </node>
+    <node id="n162">
+      <data key="v_name">MDH1</data>
+    </node>
+    <node id="n163">
+      <data key="v_name">CHMP4B</data>
+    </node>
+    <node id="n164">
+      <data key="v_name">PPP2CB</data>
+    </node>
+    <node id="n165">
+      <data key="v_name">YWHAH</data>
+    </node>
+    <node id="n166">
+      <data key="v_name">CALB1</data>
+    </node>
+    <node id="n167">
+      <data key="v_name">RPSA</data>
+    </node>
+    <node id="n168">
+      <data key="v_name">TPM3</data>
+    </node>
+    <node id="n169">
+      <data key="v_name">MYL2</data>
+    </node>
+    <node id="n170">
+      <data key="v_name">CALM1</data>
+    </node>
+    <node id="n171">
+      <data key="v_name">ARF1</data>
+    </node>
+    <node id="n172">
+      <data key="v_name">TPI1</data>
+    </node>
+    <node id="n173">
+      <data key="v_name">PGAM1</data>
+    </node>
+    <node id="n174">
+      <data key="v_name">PRDX6</data>
+    </node>
+    <node id="n175">
+      <data key="v_name">LDHA</data>
+    </node>
+    <node id="n176">
+      <data key="v_name">VIM</data>
+    </node>
+    <node id="n177">
+      <data key="v_name">COCH</data>
+    </node>
+    <node id="n178">
+      <data key="v_name">GLUL</data>
+    </node>
+    <node id="n179">
+      <data key="v_name">HBG2</data>
+    </node>
+    <node id="n180">
+      <data key="v_name">PVALB</data>
+    </node>
+    <node id="n181">
+      <data key="v_name">SNCA</data>
+    </node>
+    <node id="n182">
+      <data key="v_name">GMFB</data>
+    </node>
+    <node id="n183">
+      <data key="v_name">RAB18</data>
+    </node>
+    <node id="n184">
+      <data key="v_name">NME2</data>
+    </node>
+    <node id="n185">
+      <data key="v_name">THY1</data>
+    </node>
+    <node id="n186">
+      <data key="v_name">PSMA7</data>
+    </node>
+    <node id="n187">
+      <data key="v_name">LDHB</data>
+    </node>
+    <node id="n188">
+      <data key="v_name">GAPDH</data>
+    </node>
+    <node id="n189">
+      <data key="v_name">PGK1</data>
+    </node>
+    <node id="n190">
+      <data key="v_name">ALDOB</data>
+    </node>
+    <node id="n191">
+      <data key="v_name">PKM</data>
+    </node>
+    <node id="n192">
+      <data key="v_name">LMNB2</data>
+    </node>
+    <node id="n193">
+      <data key="v_name">LOC396224</data>
+    </node>
+    <node id="n194">
+      <data key="v_name">SKI</data>
+    </node>
+    <node id="n195">
+      <data key="v_name">HDAC4</data>
+    </node>
+    <node id="n196">
+      <data key="v_name">RAD18</data>
+    </node>
+    <node id="n197">
+      <data key="v_name">WRN</data>
+    </node>
+    <node id="n198">
+      <data key="v_name">DOT1L</data>
+    </node>
+    <node id="n199">
+      <data key="v_name">MYB</data>
+    </node>
+    <node id="n200">
+      <data key="v_name">TUBG1</data>
+    </node>
+    <node id="n201">
+      <data key="v_name">CRKL</data>
+    </node>
+    <node id="n202">
+      <data key="v_name">TUBB</data>
+    </node>
+    <node id="n203">
+      <data key="v_name">EEF2</data>
+    </node>
+    <node id="n204">
+      <data key="v_name">HSPA9</data>
+    </node>
+    <node id="n205">
+      <data key="v_name">PAICS</data>
+    </node>
+    <node id="n206">
+      <data key="v_name">RPLP0</data>
+    </node>
+    <node id="n207">
+      <data key="v_name">TUBA8</data>
+    </node>
+    <node id="n208">
+      <data key="v_name">NCL</data>
+    </node>
+    <node id="n209">
+      <data key="v_name">CCT7</data>
+    </node>
+    <node id="n210">
+      <data key="v_name">RPL30</data>
+    </node>
+    <node id="n211">
+      <data key="v_name">TUFM</data>
+    </node>
+    <node id="n212">
+      <data key="v_name">CCT8</data>
+    </node>
+    <node id="n213">
+      <data key="v_name">RPL5</data>
+    </node>
+    <node id="n214">
+      <data key="v_name">KHSRP</data>
+    </node>
+    <node id="n215">
+      <data key="v_name">ASNS</data>
+    </node>
+    <node id="n216">
+      <data key="v_name">IGF2BP3</data>
+    </node>
+    <node id="n217">
+      <data key="v_name">HNRPK</data>
+    </node>
+    <node id="n218">
+      <data key="v_name">RPS4X</data>
+    </node>
+    <node id="n219">
+      <data key="v_name">SEC23B</data>
+    </node>
+    <node id="n220">
+      <data key="v_name">STT3A</data>
+    </node>
+    <node id="n221">
+      <data key="v_name">FEN1</data>
+    </node>
+    <node id="n222">
+      <data key="v_name">RPL7</data>
+    </node>
+    <node id="n223">
+      <data key="v_name">RPLP1</data>
+    </node>
+    <node id="n224">
+      <data key="v_name">YBX1</data>
+    </node>
+    <node id="n225">
+      <data key="v_name">EIF4A2</data>
+    </node>
+    <node id="n226">
+      <data key="v_name">RPL7A</data>
+    </node>
+    <node id="n227">
+      <data key="v_name">NPM1</data>
+    </node>
+    <node id="n228">
+      <data key="v_name">EIF2S3</data>
+    </node>
+    <node id="n229">
+      <data key="v_name">RPL27</data>
+    </node>
+    <node id="n230">
+      <data key="v_name">CCT6A</data>
+    </node>
+    <node id="n231">
+      <data key="v_name">GNB2L1</data>
+    </node>
+    <node id="n232">
+      <data key="v_name">MTHFD2</data>
+    </node>
+    <node id="n233">
+      <data key="v_name">TXN</data>
+    </node>
+    <node id="n234">
+      <data key="v_name">MARCKS</data>
+    </node>
+    <node id="n235">
+      <data key="v_name">MCM3</data>
+    </node>
+    <node id="n236">
+      <data key="v_name">BDH1</data>
+    </node>
+    <node id="n237">
+      <data key="v_name">RPS12</data>
+    </node>
+    <node id="n238">
+      <data key="v_name">RPL10L</data>
+    </node>
+    <node id="n239">
+      <data key="v_name">ALDOC</data>
+    </node>
+    <node id="n240">
+      <data key="v_name">SKP1</data>
+    </node>
+    <node id="n241">
+      <data key="v_name">EIF3H</data>
+    </node>
+    <node id="n242">
+      <data key="v_name">PARK7</data>
+    </node>
+    <node id="n243">
+      <data key="v_name">DDX6</data>
+    </node>
+    <node id="n244">
+      <data key="v_name">CDK1</data>
+    </node>
+    <node id="n245">
+      <data key="v_name">DDX1</data>
+    </node>
+    <node id="n246">
+      <data key="v_name">HNRNPDL</data>
+    </node>
+    <node id="n247">
+      <data key="v_name">COPB1</data>
+    </node>
+    <node id="n248">
+      <data key="v_name">ACACA</data>
+    </node>
+    <node id="n249">
+      <data key="v_name">RPL22</data>
+    </node>
+    <node id="n250">
+      <data key="v_name">BZW2</data>
+    </node>
+    <node id="n251">
+      <data key="v_name">EIF2A</data>
+    </node>
+    <node id="n252">
+      <data key="v_name">BSG</data>
+    </node>
+    <node id="n253">
+      <data key="v_name">PHB2</data>
+    </node>
+    <node id="n254">
+      <data key="v_name">RPL36</data>
+    </node>
+    <node id="n255">
+      <data key="v_name">ANKRD10</data>
+    </node>
+    <node id="n256">
+      <data key="v_name">PPIB</data>
+    </node>
+    <node id="n257">
+      <data key="v_name">MYLK</data>
+    </node>
+    <node id="n258">
+      <data key="v_name">ACAP2</data>
+    </node>
+    <node id="n259">
+      <data key="v_name">HMGB2</data>
+    </node>
+    <node id="n260">
+      <data key="v_name">CAPZB</data>
+    </node>
+    <node id="n261">
+      <data key="v_name">ACP1</data>
+    </node>
+    <node id="n262">
+      <data key="v_name">RAN</data>
+    </node>
+    <node id="n263">
+      <data key="v_name">CSK</data>
+    </node>
+    <node id="n264">
+      <data key="v_name">TPT1</data>
+    </node>
+    <node id="n265">
+      <data key="v_name">UBE2I</data>
+    </node>
+    <node id="n266">
+      <data key="v_name">USP10</data>
+    </node>
+    <node id="n267">
+      <data key="v_name">PDIA3</data>
+    </node>
+    <node id="n268">
+      <data key="v_name">VDR</data>
+    </node>
+    <node id="n269">
+      <data key="v_name">PELO</data>
+    </node>
+    <node id="n270">
+      <data key="v_name">PLS1</data>
+    </node>
+    <node id="n271">
+      <data key="v_name">KRT19</data>
+    </node>
+    <node id="n272">
+      <data key="v_name">GLG1</data>
+    </node>
+    <node id="n273">
+      <data key="v_name">PPP1R12A</data>
+    </node>
+    <node id="n274">
+      <data key="v_name">SPC25</data>
+    </node>
+    <node id="n275">
+      <data key="v_name">MAD2L1</data>
+    </node>
+    <node id="n276">
+      <data key="v_name">CHAF1B</data>
+    </node>
+    <node id="n277">
+      <data key="v_name">H3F3C</data>
+    </node>
+    <node id="n278">
+      <data key="v_name">HIST1H47</data>
+    </node>
+    <node id="n279">
+      <data key="v_name">PRDM1</data>
+    </node>
+    <node id="n280">
+      <data key="v_name">RCHY1</data>
+    </node>
+    <node id="n281">
+      <data key="v_name">LRPAP1</data>
+    </node>
+    <node id="n282">
+      <data key="v_name">CAPN2</data>
+    </node>
+    <node id="n283">
+      <data key="v_name">CASP3</data>
+    </node>
+    <node id="n284">
+      <data key="v_name">TP53</data>
+    </node>
+    <node id="n285">
+      <data key="v_name">ADH5</data>
+    </node>
+    <node id="n286">
+      <data key="v_name">APITD1</data>
+    </node>
+    <node id="n287">
+      <data key="v_name">STRA13</data>
+    </node>
+    <node id="n288">
+      <data key="v_name">RMI1</data>
+    </node>
+    <node id="n289">
+      <data key="v_name">TOP3A</data>
+    </node>
+    <node id="n290">
+      <data key="v_name">TNNI3</data>
+    </node>
+    <node id="n291">
+      <data key="v_name">PIN1</data>
+    </node>
+    <node id="n292">
+      <data key="v_name">AKAP8L</data>
+    </node>
+    <node id="n293">
+      <data key="v_name">LOC101750306</data>
+    </node>
+    <node id="n294">
+      <data key="v_name">COPE</data>
+    </node>
+    <node id="n295">
+      <data key="v_name">CARD11</data>
+    </node>
+    <node id="n296">
+      <data key="v_name">SIAH2</data>
+    </node>
+    <node id="n297">
+      <data key="v_name">EIF3F</data>
+    </node>
+    <node id="n298">
+      <data key="v_name">CSNK2B</data>
+    </node>
+    <node id="n299">
+      <data key="v_name">DOCK7</data>
+    </node>
+    <node id="n300">
+      <data key="v_name">USP7</data>
+    </node>
+    <node id="n301">
+      <data key="v_name">ATAD3A</data>
+    </node>
+    <node id="n302">
+      <data key="v_name">RAF1</data>
+    </node>
+    <node id="n303">
+      <data key="v_name">IQGAP1</data>
+    </node>
+    <node id="n304">
+      <data key="v_name">GNAI2</data>
+    </node>
+    <node id="n305">
+      <data key="v_name">CDC37</data>
+    </node>
+    <node id="n306">
+      <data key="v_name">DYNC1LI1</data>
+    </node>
+    <node id="n307">
+      <data key="v_name">MAP2K2</data>
+    </node>
+    <node id="n308">
+      <data key="v_name">MAP2K1</data>
+    </node>
+    <node id="n309">
+      <data key="v_name">GNAS</data>
+    </node>
+    <node id="n310">
+      <data key="v_name">FKBP5</data>
+    </node>
+    <node id="n311">
+      <data key="v_name">HSPA4L</data>
+    </node>
+    <node id="n312">
+      <data key="v_name">PTN</data>
+    </node>
+    <node id="n313">
+      <data key="v_name">PTPRZ1</data>
+    </node>
+    <edge source="n0" target="n33">
+    </edge>
+    <edge source="n0" target="n89">
+    </edge>
+    <edge source="n1" target="n2">
+    </edge>
+    <edge source="n1" target="n59">
+    </edge>
+    <edge source="n2" target="n90">
+    </edge>
+    <edge source="n2" target="n91">
+    </edge>
+    <edge source="n3" target="n4">
+    </edge>
+    <edge source="n5" target="n92">
+    </edge>
+    <edge source="n6" target="n7">
+    </edge>
+    <edge source="n6" target="n93">
+    </edge>
+    <edge source="n6" target="n94">
+    </edge>
+    <edge source="n6" target="n95">
+    </edge>
+    <edge source="n6" target="n98">
+    </edge>
+    <edge source="n7" target="n22">
+    </edge>
+    <edge source="n7" target="n78">
+    </edge>
+    <edge source="n7" target="n94">
+    </edge>
+    <edge source="n7" target="n285">
+    </edge>
+    <edge source="n9" target="n96">
+    </edge>
+    <edge source="n10" target="n96">
+    </edge>
+    <edge source="n11" target="n17">
+    </edge>
+    <edge source="n11" target="n18">
+    </edge>
+    <edge source="n11" target="n19">
+    </edge>
+    <edge source="n11" target="n65">
+    </edge>
+    <edge source="n12" target="n13">
+    </edge>
+    <edge source="n14" target="n15">
+    </edge>
+    <edge source="n16" target="n97">
+    </edge>
+    <edge source="n18" target="n21">
+    </edge>
+    <edge source="n19" target="n21">
+    </edge>
+    <edge source="n20" target="n98">
+    </edge>
+    <edge source="n21" target="n99">
+    </edge>
+    <edge source="n22" target="n23">
+    </edge>
+    <edge source="n22" target="n75">
+    </edge>
+    <edge source="n22" target="n76">
+    </edge>
+    <edge source="n22" target="n78">
+    </edge>
+    <edge source="n22" target="n82">
+    </edge>
+    <edge source="n22" target="n285">
+    </edge>
+    <edge source="n23" target="n55">
+    </edge>
+    <edge source="n24" target="n100">
+    </edge>
+    <edge source="n25" target="n100">
+    </edge>
+    <edge source="n26" target="n100">
+    </edge>
+    <edge source="n27" target="n28">
+    </edge>
+    <edge source="n27" target="n59">
+    </edge>
+    <edge source="n29" target="n101">
+    </edge>
+    <edge source="n29" target="n102">
+    </edge>
+    <edge source="n29" target="n103">
+    </edge>
+    <edge source="n29" target="n104">
+    </edge>
+    <edge source="n29" target="n105">
+    </edge>
+    <edge source="n30" target="n31">
+    </edge>
+    <edge source="n30" target="n32">
+    </edge>
+    <edge source="n30" target="n101">
+    </edge>
+    <edge source="n30" target="n102">
+    </edge>
+    <edge source="n30" target="n103">
+    </edge>
+    <edge source="n30" target="n104">
+    </edge>
+    <edge source="n30" target="n105">
+    </edge>
+    <edge source="n30" target="n274">
+    </edge>
+    <edge source="n30" target="n275">
+    </edge>
+    <edge source="n31" target="n32">
+    </edge>
+    <edge source="n33" target="n34">
+    </edge>
+    <edge source="n33" target="n35">
+    </edge>
+    <edge source="n33" target="n36">
+    </edge>
+    <edge source="n33" target="n37">
+    </edge>
+    <edge source="n33" target="n38">
+    </edge>
+    <edge source="n33" target="n39">
+    </edge>
+    <edge source="n33" target="n40">
+    </edge>
+    <edge source="n33" target="n41">
+    </edge>
+    <edge source="n33" target="n42">
+    </edge>
+    <edge source="n33" target="n43">
+    </edge>
+    <edge source="n33" target="n44">
+    </edge>
+    <edge source="n33" target="n45">
+    </edge>
+    <edge source="n33" target="n46">
+    </edge>
+    <edge source="n33" target="n47">
+    </edge>
+    <edge source="n33" target="n48">
+    </edge>
+    <edge source="n33" target="n49">
+    </edge>
+    <edge source="n33" target="n50">
+    </edge>
+    <edge source="n33" target="n51">
+    </edge>
+    <edge source="n33" target="n52">
+    </edge>
+    <edge source="n33" target="n63">
+    </edge>
+    <edge source="n33" target="n64">
+    </edge>
+    <edge source="n33" target="n106">
+    </edge>
+    <edge source="n33" target="n107">
+    </edge>
+    <edge source="n33" target="n108">
+    </edge>
+    <edge source="n33" target="n109">
+    </edge>
+    <edge source="n33" target="n110">
+    </edge>
+    <edge source="n33" target="n111">
+    </edge>
+    <edge source="n33" target="n112">
+    </edge>
+    <edge source="n33" target="n113">
+    </edge>
+    <edge source="n33" target="n114">
+    </edge>
+    <edge source="n33" target="n115">
+    </edge>
+    <edge source="n33" target="n116">
+    </edge>
+    <edge source="n33" target="n117">
+    </edge>
+    <edge source="n33" target="n118">
+    </edge>
+    <edge source="n33" target="n119">
+    </edge>
+    <edge source="n33" target="n120">
+    </edge>
+    <edge source="n33" target="n121">
+    </edge>
+    <edge source="n33" target="n122">
+    </edge>
+    <edge source="n33" target="n123">
+    </edge>
+    <edge source="n33" target="n124">
+    </edge>
+    <edge source="n33" target="n125">
+    </edge>
+    <edge source="n33" target="n126">
+    </edge>
+    <edge source="n33" target="n127">
+    </edge>
+    <edge source="n33" target="n128">
+    </edge>
+    <edge source="n33" target="n129">
+    </edge>
+    <edge source="n33" target="n130">
+    </edge>
+    <edge source="n33" target="n131">
+    </edge>
+    <edge source="n33" target="n132">
+    </edge>
+    <edge source="n33" target="n133">
+    </edge>
+    <edge source="n33" target="n134">
+    </edge>
+    <edge source="n33" target="n135">
+    </edge>
+    <edge source="n33" target="n136">
+    </edge>
+    <edge source="n33" target="n137">
+    </edge>
+    <edge source="n33" target="n138">
+    </edge>
+    <edge source="n33" target="n139">
+    </edge>
+    <edge source="n33" target="n140">
+    </edge>
+    <edge source="n33" target="n141">
+    </edge>
+    <edge source="n33" target="n142">
+    </edge>
+    <edge source="n33" target="n143">
+    </edge>
+    <edge source="n33" target="n144">
+    </edge>
+    <edge source="n33" target="n145">
+    </edge>
+    <edge source="n33" target="n146">
+    </edge>
+    <edge source="n33" target="n147">
+    </edge>
+    <edge source="n33" target="n148">
+    </edge>
+    <edge source="n33" target="n149">
+    </edge>
+    <edge source="n33" target="n150">
+    </edge>
+    <edge source="n33" target="n151">
+    </edge>
+    <edge source="n33" target="n152">
+    </edge>
+    <edge source="n33" target="n153">
+    </edge>
+    <edge source="n33" target="n154">
+    </edge>
+    <edge source="n33" target="n155">
+    </edge>
+    <edge source="n33" target="n156">
+    </edge>
+    <edge source="n33" target="n157">
+    </edge>
+    <edge source="n33" target="n158">
+    </edge>
+    <edge source="n33" target="n159">
+    </edge>
+    <edge source="n33" target="n160">
+    </edge>
+    <edge source="n33" target="n161">
+    </edge>
+    <edge source="n33" target="n162">
+    </edge>
+    <edge source="n33" target="n163">
+    </edge>
+    <edge source="n33" target="n164">
+    </edge>
+    <edge source="n33" target="n165">
+    </edge>
+    <edge source="n33" target="n166">
+    </edge>
+    <edge source="n33" target="n167">
+    </edge>
+    <edge source="n33" target="n168">
+    </edge>
+    <edge source="n33" target="n169">
+    </edge>
+    <edge source="n33" target="n170">
+    </edge>
+    <edge source="n33" target="n171">
+    </edge>
+    <edge source="n33" target="n172">
+    </edge>
+    <edge source="n33" target="n173">
+    </edge>
+    <edge source="n33" target="n174">
+    </edge>
+    <edge source="n33" target="n175">
+    </edge>
+    <edge source="n33" target="n176">
+    </edge>
+    <edge source="n33" target="n177">
+    </edge>
+    <edge source="n33" target="n178">
+    </edge>
+    <edge source="n33" target="n179">
+    </edge>
+    <edge source="n33" target="n180">
+    </edge>
+    <edge source="n33" target="n181">
+    </edge>
+    <edge source="n33" target="n182">
+    </edge>
+    <edge source="n33" target="n183">
+    </edge>
+    <edge source="n33" target="n184">
+    </edge>
+    <edge source="n33" target="n185">
+    </edge>
+    <edge source="n33" target="n186">
+    </edge>
+    <edge source="n33" target="n187">
+    </edge>
+    <edge source="n33" target="n188">
+    </edge>
+    <edge source="n33" target="n189">
+    </edge>
+    <edge source="n33" target="n190">
+    </edge>
+    <edge source="n33" target="n191">
+    </edge>
+    <edge source="n33" target="n192">
+    </edge>
+    <edge source="n33" target="n193">
+    </edge>
+    <edge source="n34" target="n81">
+    </edge>
+    <edge source="n38" target="n42">
+    </edge>
+    <edge source="n38" target="n46">
+    </edge>
+    <edge source="n38" target="n59">
+    </edge>
+    <edge source="n38" target="n64">
+    </edge>
+    <edge source="n42" target="n46">
+    </edge>
+    <edge source="n42" target="n59">
+    </edge>
+    <edge source="n42" target="n61">
+    </edge>
+    <edge source="n42" target="n64">
+    </edge>
+    <edge source="n45" target="n59">
+    </edge>
+    <edge source="n45" target="n81">
+    </edge>
+    <edge source="n46" target="n59">
+    </edge>
+    <edge source="n46" target="n61">
+    </edge>
+    <edge source="n46" target="n62">
+    </edge>
+    <edge source="n53" target="n194">
+    </edge>
+    <edge source="n54" target="n194">
+    </edge>
+    <edge source="n54" target="n195">
+    </edge>
+    <edge source="n55" target="n196">
+    </edge>
+    <edge source="n55" target="n197">
+    </edge>
+    <edge source="n56" target="n198">
+    </edge>
+    <edge source="n57" target="n100">
+    </edge>
+    <edge source="n58" target="n199">
+    </edge>
+    <edge source="n59" target="n62">
+    </edge>
+    <edge source="n59" target="n64">
+    </edge>
+    <edge source="n59" target="n109">
+    </edge>
+    <edge source="n59" target="n113">
+    </edge>
+    <edge source="n59" target="n119">
+    </edge>
+    <edge source="n59" target="n122">
+    </edge>
+    <edge source="n59" target="n148">
+    </edge>
+    <edge source="n59" target="n154">
+    </edge>
+    <edge source="n59" target="n159">
+    </edge>
+    <edge source="n59" target="n167">
+    </edge>
+    <edge source="n59" target="n170">
+    </edge>
+    <edge source="n59" target="n173">
+    </edge>
+    <edge source="n59" target="n175">
+    </edge>
+    <edge source="n59" target="n184">
+    </edge>
+    <edge source="n59" target="n187">
+    </edge>
+    <edge source="n59" target="n188">
+    </edge>
+    <edge source="n59" target="n189">
+    </edge>
+    <edge source="n59" target="n191">
+    </edge>
+    <edge source="n59" target="n200">
+    </edge>
+    <edge source="n59" target="n201">
+    </edge>
+    <edge source="n59" target="n202">
+    </edge>
+    <edge source="n59" target="n203">
+    </edge>
+    <edge source="n59" target="n204">
+    </edge>
+    <edge source="n59" target="n205">
+    </edge>
+    <edge source="n59" target="n206">
+    </edge>
+    <edge source="n59" target="n207">
+    </edge>
+    <edge source="n59" target="n208">
+    </edge>
+    <edge source="n59" target="n209">
+    </edge>
+    <edge source="n59" target="n210">
+    </edge>
+    <edge source="n59" target="n211">
+    </edge>
+    <edge source="n59" target="n212">
+    </edge>
+    <edge source="n59" target="n213">
+    </edge>
+    <edge source="n59" target="n214">
+    </edge>
+    <edge source="n59" target="n215">
+    </edge>
+    <edge source="n59" target="n216">
+    </edge>
+    <edge source="n59" target="n217">
+    </edge>
+    <edge source="n59" target="n218">
+    </edge>
+    <edge source="n59" target="n219">
+    </edge>
+    <edge source="n59" target="n220">
+    </edge>
+    <edge source="n59" target="n221">
+    </edge>
+    <edge source="n59" target="n222">
+    </edge>
+    <edge source="n59" target="n223">
+    </edge>
+    <edge source="n59" target="n224">
+    </edge>
+    <edge source="n59" target="n225">
+    </edge>
+    <edge source="n59" target="n226">
+    </edge>
+    <edge source="n59" target="n227">
+    </edge>
+    <edge source="n59" target="n228">
+    </edge>
+    <edge source="n59" target="n229">
+    </edge>
+    <edge source="n59" target="n230">
+    </edge>
+    <edge source="n59" target="n231">
+    </edge>
+    <edge source="n59" target="n232">
+    </edge>
+    <edge source="n59" target="n233">
+    </edge>
+    <edge source="n59" target="n234">
+    </edge>
+    <edge source="n59" target="n235">
+    </edge>
+    <edge source="n59" target="n236">
+    </edge>
+    <edge source="n59" target="n237">
+    </edge>
+    <edge source="n59" target="n238">
+    </edge>
+    <edge source="n59" target="n239">
+    </edge>
+    <edge source="n59" target="n240">
+    </edge>
+    <edge source="n59" target="n241">
+    </edge>
+    <edge source="n59" target="n242">
+    </edge>
+    <edge source="n59" target="n243">
+    </edge>
+    <edge source="n59" target="n244">
+    </edge>
+    <edge source="n59" target="n245">
+    </edge>
+    <edge source="n59" target="n246">
+    </edge>
+    <edge source="n59" target="n247">
+    </edge>
+    <edge source="n59" target="n248">
+    </edge>
+    <edge source="n59" target="n249">
+    </edge>
+    <edge source="n59" target="n250">
+    </edge>
+    <edge source="n59" target="n251">
+    </edge>
+    <edge source="n59" target="n252">
+    </edge>
+    <edge source="n59" target="n253">
+    </edge>
+    <edge source="n59" target="n254">
+    </edge>
+    <edge source="n59" target="n255">
+    </edge>
+    <edge source="n59" target="n256">
+    </edge>
+    <edge source="n59" target="n257">
+    </edge>
+    <edge source="n59" target="n258">
+    </edge>
+    <edge source="n59" target="n259">
+    </edge>
+    <edge source="n59" target="n260">
+    </edge>
+    <edge source="n59" target="n261">
+    </edge>
+    <edge source="n59" target="n262">
+    </edge>
+    <edge source="n59" target="n263">
+    </edge>
+    <edge source="n59" target="n264">
+    </edge>
+    <edge source="n59" target="n265">
+    </edge>
+    <edge source="n59" target="n266">
+    </edge>
+    <edge source="n59" target="n267">
+    </edge>
+    <edge source="n59" target="n268">
+    </edge>
+    <edge source="n59" target="n269">
+    </edge>
+    <edge source="n59" target="n270">
+    </edge>
+    <edge source="n59" target="n271">
+    </edge>
+    <edge source="n59" target="n272">
+    </edge>
+    <edge source="n61" target="n62">
+    </edge>
+    <edge source="n63" target="n273">
+    </edge>
+    <edge source="n64" target="n81">
+    </edge>
+    <edge source="n65" target="n276">
+    </edge>
+    <edge source="n65" target="n277">
+    </edge>
+    <edge source="n65" target="n278">
+    </edge>
+    <edge source="n66" target="n279">
+    </edge>
+    <edge source="n67" target="n68">
+    </edge>
+    <edge source="n69" target="n280">
+    </edge>
+    <edge source="n70" target="n72">
+    </edge>
+    <edge source="n70" target="n281">
+    </edge>
+    <edge source="n71" target="n72">
+    </edge>
+    <edge source="n71" target="n281">
+    </edge>
+    <edge source="n73" target="n282">
+    </edge>
+    <edge source="n73" target="n283">
+    </edge>
+    <edge source="n73" target="n284">
+    </edge>
+    <edge source="n74" target="n282">
+    </edge>
+    <edge source="n74" target="n283">
+    </edge>
+    <edge source="n74" target="n284">
+    </edge>
+    <edge source="n77" target="n286">
+    </edge>
+    <edge source="n77" target="n287">
+    </edge>
+    <edge source="n77" target="n288">
+    </edge>
+    <edge source="n77" target="n289">
+    </edge>
+    <edge source="n78" target="n82">
+    </edge>
+    <edge source="n79" target="n159">
+    </edge>
+    <edge source="n80" target="n290">
+    </edge>
+    <edge source="n81" target="n109">
+    </edge>
+    <edge source="n81" target="n119">
+    </edge>
+    <edge source="n81" target="n122">
+    </edge>
+    <edge source="n81" target="n133">
+    </edge>
+    <edge source="n81" target="n134">
+    </edge>
+    <edge source="n81" target="n142">
+    </edge>
+    <edge source="n81" target="n164">
+    </edge>
+    <edge source="n81" target="n165">
+    </edge>
+    <edge source="n81" target="n204">
+    </edge>
+    <edge source="n81" target="n227">
+    </edge>
+    <edge source="n81" target="n253">
+    </edge>
+    <edge source="n81" target="n262">
+    </edge>
+    <edge source="n81" target="n291">
+    </edge>
+    <edge source="n81" target="n292">
+    </edge>
+    <edge source="n81" target="n293">
+    </edge>
+    <edge source="n81" target="n294">
+    </edge>
+    <edge source="n81" target="n295">
+    </edge>
+    <edge source="n81" target="n296">
+    </edge>
+    <edge source="n81" target="n297">
+    </edge>
+    <edge source="n81" target="n298">
+    </edge>
+    <edge source="n81" target="n299">
+    </edge>
+    <edge source="n81" target="n300">
+    </edge>
+    <edge source="n81" target="n301">
+    </edge>
+    <edge source="n81" target="n302">
+    </edge>
+    <edge source="n81" target="n303">
+    </edge>
+    <edge source="n81" target="n304">
+    </edge>
+    <edge source="n81" target="n305">
+    </edge>
+    <edge source="n81" target="n306">
+    </edge>
+    <edge source="n81" target="n307">
+    </edge>
+    <edge source="n81" target="n308">
+    </edge>
+    <edge source="n81" target="n309">
+    </edge>
+    <edge source="n81" target="n310">
+    </edge>
+    <edge source="n81" target="n311">
+    </edge>
+    <edge source="n83" target="n84">
+    </edge>
+    <edge source="n85" target="n86">
+    </edge>
+    <edge source="n87" target="n312">
+    </edge>
+    <edge source="n87" target="n313">
+    </edge>
+    <edge source="n88" target="n312">
+    </edge>
+    <edge source="n88" target="n313">
+    </edge>
+  </graph>
+</graphml>

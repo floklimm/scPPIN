@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+         http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<!-- Created by igraph -->
+  <key id="v_name" for="node" attr.name="name" attr.type="string"/>
+  <graph id="G" edgedefault="undirected">
+    <node id="n0">
+      <data key="v_name">pcna1</data>
+    </node>
+    <node id="n1">
+      <data key="v_name">akin1</data>
+    </node>
+    <node id="n2">
+      <data key="v_name">CK2</data>
+    </node>
+    <node id="n3">
+      <data key="v_name">bif2</data>
+    </node>
+    <node id="n4">
+      <data key="v_name">LOC541812</data>
+    </node>
+    <node id="n5">
+      <data key="v_name">LOC100191882</data>
+    </node>
+    <node id="n6">
+      <data key="v_name">umc1775</data>
+    </node>
+    <node id="n7">
+      <data key="v_name">SnrK1</data>
+    </node>
+    <node id="n8">
+      <data key="v_name">esp1</data>
+    </node>
+    <node id="n9">
+      <data key="v_name">LOC103637824</data>
+    </node>
+    <node id="n10">
+      <data key="v_name">caf2</data>
+    </node>
+    <node id="n11">
+      <data key="v_name">rif1</data>
+    </node>
+    <edge source="n0" target="n6">
+    </edge>
+    <edge source="n1" target="n7">
+    </edge>
+    <edge source="n2" target="n8">
+    </edge>
+    <edge source="n3" target="n9">
+    </edge>
+    <edge source="n4" target="n10">
+    </edge>
+    <edge source="n5" target="n11">
+    </edge>
+  </graph>
+</graphml>

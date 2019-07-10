@@ -1,18 +1,13 @@
-# library for iGraph version for functional module detection
-# Some useful keyboard shortcuts for package authoring:
-#
-#   Build and Reload Package:  'Cmd + Shift + B'
-#   Check Package:             'Cmd + Shift + E'
-#   Test Package:              'Cmd + Shift + T'
+# scPPIN library for iGraph version for functional module detection
+# If used please cite Klimm et al.
+# "Functional module detection through integration of single-cell RNA sequencing data with protein–protein interaction networks"
 
 
 # load necessary other libraries
-#library(rlist)
 library(igraph) # for handlign graphs/networks
 library(qgraph) # for nicer plotting of the graphs
 library(RColorBrewer) # for colourmaps for plotting
 library(MASS) # for the fitting of the density function
-library(jsonlite)
 
 loadPPIN <-function(){
   # loads biogrid protein--protein interaction network and returns it as a graphml
@@ -115,11 +110,8 @@ plotFunctionalModule <-function(functionalModule,fdr,plotColorbar,layoutGraph,no
 colorbar <- function(colors) {
   count <- length(colors) # number of colours
   m <- matrix(1:count, 1,count) # create matrix with colour numbers
-  #par(mar=c(0.2, 2, 1, 2), cex.axis=2, ann=T, tck=-1)
   image(m, col=colors, ylab="", axes=FALSE)
   mtext("log10(p-values)", side=2) # left
-
-  #axis(side=3, at=seq(from=-0.165, to=1.22, by=0.132),labels=letters[1:11])
 }
 
 
@@ -443,56 +435,3 @@ get_os <- function(){
   tolower(os)
 }
 
-
-
-# first version of those functions to Angelo Antonio Salatino
-# http://infernusweb.altervista.org/wp/
-#' Both functions need jsonlite library
-#' library(jsonlite)
-
-
-#' Allow to both export and convert an igraph object to JSON.
-#'
-#' @param g the igraph object
-#' @param filename the out filename where to store the converted json. This parameter is optional. The funcion returns a json anyway. If this parameter is set it will also be saved into the file
-#' @return json string
-exportGraph <- function(g,filename){
-  #convert graph into a list
-  graph <- list()
-  graph$links <-  igraph::as_data_frame(g, what = "edges")
-  graph$nodes <-  igraph::as_data_frame(g, what="vertices")
-  # polish vertices
-  row.names(graph$vertices) <- NULL
-  if(ncol(graph$nodes)==0) graph$nodes <- NULL #in case the
-
-  graph$directed <- is.directed(g)
-  graph$name <- g$name
-  #convert list into a json
-  json.content <- toJSON(graph, pretty=TRUE)
-  #write json into a file
-  if(!missing(filename)) {
-    file.create(filename)
-    sink(filename)
-    cat(json.content)
-    sink()
-  }
-  #return the json in case you need it
-  return(json.content)
-}
-
-#' Allows to convert a json into an igraph object
-#' It is essential that the json contains an igraph object
-#'
-#' @param filename either the json or the filename of the file containing the json
-importGraph <- function(filename){
-  built.graph <- fromJSON(filename, flatten=TRUE)
-  if("vertices" %in% names(built.graph)){
-    built.g <- graph_from_data_frame(built.graph$edges, directed=built.graph$directed, vertices=built.graph$vertices)
-  }else{
-    built.g <- graph_from_data_frame(built.graph$edges, directed=built.graph$directed)
-  }
-  if("name" %in% names(built.graph)){
-    built.g$name <- built.graph$name
-  }
-  return(built.g)
-}
