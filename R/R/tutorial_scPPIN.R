@@ -50,7 +50,7 @@ computedNodePositions2 <- qgraph.layout.fruchtermanreingold(e2,vcount=vcount(fun
 plotFunctionalModule(functionalModuleH1H3_missingData,fdr=FDR,layoutGraph=computedNodePositions2)
 # 5) If you want to check the fit of the BUM model, you can use the following command with the plot option set to TRUE
 fitBUMResult <- fitBUM(pValuesH1vsH3,plot=TRUE)
-# Kolmogorov Smirnov test
+# Kolmogorov Smirnov test for fit of BUM to data
 ks.test(pValuesH1vsH3,BUMdensityCummulative,coef(fitBUMResult)['lambda'],coef(fitBUMResult)['alpha'])
 
 
