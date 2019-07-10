@@ -43,6 +43,7 @@ In Step 4 all computations are executed:
 All networks and modules (which are subnetworks) are igraph objects.
 
 ## Tutorial
+### Tutorial 1: Basic usage
 
 The usage is demonstrated for two examples in *tutorial_scPPIN.R*. In these tutorials the steps 1 to 3 (preprocessing, cell cluster identification, and computation of differentially expressed genes) are replaced by a loading of pre-computed p-values.
 
@@ -55,6 +56,9 @@ The function `functionalModuleH1H3_missingData` allows the computation of functi
 ![alt text][ppinModule]
 
 [ppinModule]: https://github.com/floklimm/scPPIN/blob/master/images/activeModuleExampleMissingData.png "Example functional module with missing gene-expression information"
+
+### Step-by-step tutorial
+In the script *tutorial_scPPIN-stepwise.R* the functionality is shown step-by-step. This might be helpful if user want to adapt some of the steps with their own function (e.g., a different choice of node scores). The result should be the same as in the real-world example in the first tutorial.
 
 ## FAQs
 
