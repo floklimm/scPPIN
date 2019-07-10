@@ -57,7 +57,7 @@ The function `functionalModuleH1H3_missingData` allows the computation of functi
 
 [ppinModule]: https://github.com/floklimm/scPPIN/blob/master/images/activeModuleExampleMissingData.png "Example functional module with missing gene-expression information"
 
-### Step-by-step tutorial
+### Tutorial 2: Step-by-step
 In the script *tutorial_scPPIN-stepwise.R* the functionality is shown step-by-step. This might be helpful if user want to adapt some of the steps with their own function (e.g., a different choice of node scores). The result should be the same as in the real-world example in the first tutorial.
 
 ## FAQs
