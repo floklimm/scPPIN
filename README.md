@@ -56,7 +56,7 @@ The function `functionalModuleH1H3_missingData` allows the computation of functi
 
 [ppinModule]: https://github.com/floklimm/scPPIN/blob/master/images/activeModuleExampleMissingData.png "Example functional module with missing gene-expression information"
 
-## FAQ
+## FAQs
 
 1. When loading the PPIN with the `load_ppin()` function I get an error *Can not open GraphML file*
 > Most likely this is happening because R does not find the file. Make sure that you are in the correct working directory `./scPPIN-master/R`

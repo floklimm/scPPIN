@@ -356,6 +356,9 @@ readSTPoutfileMWCS <- function(fileName){
 # the BUM density as a function
 BUMdensity <- function(x,lambda,alpha){ lambda + (1-lambda)*alpha*x^(alpha-1) }
 
+BUMdensityCummulative <- function(x,lambda,alpha){ lambda*x + (1-lambda)*x^(alpha) }
+
+
 # fitting a a beta-uniform mixture to the observed, uncorrected p-values
 fitBUM <- function(pValues, plot = FALSE){
   # fitting the distribution
