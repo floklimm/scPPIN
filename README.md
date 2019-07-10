@@ -51,7 +51,7 @@ For the first, small example the obtained functional module consists of three no
 
 The tutorial also demonstrates the usage of `qgraph` for a nicer plotting of the functional modules and some helper functions (e.g., `fitBUM`)
 
-The function `functionalModuleH1H3_missingData` allows the computation of functional modules while keeping proteins without gene-expression information.
+The function `functionalModuleH1H3_missingData` allows the computation of functional modules while keeping proteins without gene-expression information (shown as red boxes in the image below).
 
 ![alt text][ppinModule]
 
