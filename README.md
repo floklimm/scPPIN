@@ -8,7 +8,7 @@ This R library allows the computation of active modules in protein-protein inter
 >
 > Florian Klimm, Enrique M. Toledo, Thomas Monfeuga, Fang Zhang, Charlotte M. Deane, and Gesine Reinert
 
-The article is available HERE (link to be included)
+The preprint is available on [bioRxiv](https://www.biorxiv.org/content/10.1101/698647v1).
 
 ## Dependencies
 * R
