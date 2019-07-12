@@ -13,6 +13,8 @@ pValuesRaw <- read.csv("./inst/extdata/examplePvalues.csv")
 # rewrite them as a named vector of doubles
 pValues <- pValuesRaw$pVal
 names(pValues) <- pValuesRaw$gene
+# if the gene symbols are not in upper case, use the `toupper` function
+#names(pValues) <- toupper(pValuesRaw$gene)
 
 # 2) Run our algorithms
 FDR <- 10^{-2} # choose the false discovery rate
