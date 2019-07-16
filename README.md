@@ -17,10 +17,9 @@ The preprint is available on [bioRxiv](https://www.biorxiv.org/content/10.1101/6
     * qgraph
     * RColorBrewer
     * MASS
-    * jsonlite
 * dapcstp [(available on GitHub)](https://github.com/mluipersbeck/dapcstp) and discussed in
-> A Dual Ascent-Based Branch-and-Bound Framework for the Prize-Collecting Steiner Tree and Related Problems
-> M. Leitner, I. Ljubic, M. Luipersbeck, M. Sinnl
+> A Dual Ascent-Based Branch-and-Bound Framework for the Prize-Collecting Steiner Tree and Related Problems  
+> M. Leitner, I. Ljubic, M. Luipersbeck, M. Sinnl  
 > INFORMS Journal on Computing 30(2):402-420, 2018
 
 **The solver dapcstp can be installed with the linked source code. We also provide pre-compiled binaries for Unix (Fedora 30) and Mac. It is likely, however, that you have to compile it for your system. If you name the executable differently, you have to change its call in the R function `calculatePrizeCollectingSteinerTree()`**
