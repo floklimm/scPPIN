@@ -17,7 +17,7 @@ The preprint is available on [bioRxiv](https://www.biorxiv.org/content/10.1101/6
     * qgraph
     * RColorBrewer
     * MASS
-* dapcstp [(available on GitHub)](https://github.com/mluipersbeck/dapcstp) and discussed in
+* dapcstp [(available on GitHub)](https://github.com/mluipersbeck/dapcstp) as discussed in
 > A Dual Ascent-Based Branch-and-Bound Framework for the Prize-Collecting Steiner Tree and Related Problems  
 > M. Leitner, I. Ljubic, M. Luipersbeck, M. Sinnl  
 > INFORMS Journal on Computing 30(2):402-420, 2018
