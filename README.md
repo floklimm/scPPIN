@@ -53,7 +53,7 @@ For the first, small example the obtained functional module consists of three no
 
 The tutorial also demonstrates the usage of `qgraph` for a nicer plotting of the functional modules and some helper functions (e.g., `fitBUM`)
 
-The function `functionalModuleH1H3_missingData` allows the computation of functional modules while keeping proteins without gene-expression information (shown as red boxes in the image below).
+The function `detectFunctionalModule(ppin,pValues,FDR)` has also an optional argument `missingDataScore=TRUE`, which allows the computation of functional modules while keeping proteins without gene-expression information (shown as red boxes in the image below).
 
 ![alt text][ppinModule]
 
@@ -81,6 +81,9 @@ In the script *tutorial_scPPIN-stepwise.R* the functionality is shown step-by-st
 
 6. When using the `fitBUM` function I receive an error.
 > This often occurs when the p-values are not in the half-open interval (0,1]. This means that p-values of zero are not allowed. (a first workaround would be to replace all zero p-values with the smallest of all non-zero p-values.)
+
+7. When compyling `dapcstp`, I receive an error.
+> Please report such errors to the [(creators)](https://github.com/mluipersbeck/dapcstp) of `dapcstp`.
 
 ## License
 This project is licensed under the AGPL - see the [LICENSE](https://github.com/floklimm/scPPIN/blob/master/LICENSE) file for details.
