@@ -62,6 +62,11 @@ The function `detectFunctionalModule(ppin,pValues,FDR)` has also an optional arg
 ### Tutorial 2: Step-by-step
 In the script *tutorial_scPPIN-stepwise.R* the functionality is shown step-by-step. This might be helpful if user want to adapt some of the steps with their own function (e.g., a different choice of node scores). The result should be the same as in the real-world example in the first tutorial.
 
+### Tutorial 3: Use with scanpy
+
+The python library [scanpy](https://icb-scanpy.readthedocs-hosted.com/en/stable/) is a toolit for analyzing single-cell gene expression data. You can use scapny to cluster cells, compute p-values of differential expression, save them as a csv, and use scPPIN in R to compute the functional modules. For details see the folder *scanpyTutorial*.
+
+
 ## FAQs
 
 1. When loading the PPIN with the `load_ppin()` function I get an error *Can not open GraphML file*
