@@ -1,0 +1,34 @@
+SECTION Comment
+Name DAPCSTP_temp
+Program da
+Version 1.0
+END
+
+SECTION Solutions
+Solution 9510.664801 0.519
+END
+
+SECTION BestSolution
+Vertices 10
+V 397
+V 440
+V 553
+V 597
+V 746
+V 753
+V 858
+V 1084
+V 1120
+V 1744
+Edges 9
+E 397 440
+E 397 597
+E 746 553
+E 397 753
+E 753 746
+E 397 858
+E 553 1084
+E 553 1120
+E 858 1744
+END
+
