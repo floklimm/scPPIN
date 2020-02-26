@@ -66,8 +66,8 @@ In the script *tutorial_scPPIN-stepwise.R* the functionality is shown step-by-st
 
 The python library [scanpy](https://icb-scanpy.readthedocs-hosted.com/en/stable/) is a toolit for analyzing single-cell gene expression data. You can use scapny to cluster cells, compute p-values of differential expression, save them as a csv, and use scPPIN in R to compute the functional modules. For details see the folder *scanpyTutorial*.
 
-### Tutorial 4: Liver data tutorial
-To analyse the same data as in our [manuscript](https://www.biorxiv.org/content/10.1101/698647v2), please look in the folder `./liverDataTutorial`.
+### Tutorial 4: Liver data tutorial with Seurat
+To analyse the same data as in our [manuscript](https://www.biorxiv.org/content/10.1101/698647v2), please look in the folder `./liverDataTutorial`. A similar workflow is probably fruitful for other workflows with Seurat.
 
 ## FAQs
 
