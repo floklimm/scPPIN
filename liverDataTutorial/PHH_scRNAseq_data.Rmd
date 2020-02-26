@@ -1,0 +1,268 @@
+---
+title: "Primary Human Hepatocytes baseline description by scRNAseq"
+author: "Enrique M. Toledo"
+date: "26/02/2020"
+output: 
+  html_document: 
+    code_folding: hide
+    theme: cosmo
+    toc: yes
+---
+
+**scPPIN input Generation**
+
+
+This file shows a reproducible code of the single cell RNA seq procedure to generate the input for scPPIN used in the manuscript Klimm F et al.
+    
+Details : https://github.com/floklimm/scPPIN
+      
+> Functional module detection through integration of single-cell RNA sequencing data with protein–protein interaction networks.  
+> Florian Klimm, Enrique M. Toledo, Thomas Monfeuga, Fang Zhang, Charlotte M. Deane, and Gesine Reinert  
+> bioRxiv 698647; doi: https://doi.org/10.1101/698647     
+
+ 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Data Loading from GEO
+
+Getting the dataset from GEO, accession [GSE133948](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE133948).
+This notebook was done with Seurat version 2, to install it plese follow the instructions from [here](https://satijalab.org/seurat/install.html)
+
+```{r, message=F}
+suppressMessages(library(tidyverse))
+suppressMessages(library(cowplot))
+#source("https://z.umn.edu/archived-seurat") # to install v2 
+suppressMessages(library(Seurat))
+```
+
+```{r, echo=F,message=F}
+if (packageVersion("Seurat")!='2.3.4'){ stop("Please install Seurat v2. Instructions here: https://satijalab.org/seurat/install.html")}
+# Get data from https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE133948
+counts <- read_csv("ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE133nnn/GSE133948/suppl/GSE133948_Raw.counts_baseline_liverspheroid.csv.gz") %>% rename(SYMBOL=X1)
+metadata <- read_csv("ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE133nnn/GSE133948/suppl/GSE133948_metadata_cells.csv.gz")
+```
+
+## Reconstruct Seurat Object
+
+The information of on which sequencing run/lane was not included in GEO metadata althoug it can be extracted from biosamples information. But now it is available in here in file `cell_run_info.rds` in here.    
+
+Details https://www.ncbi.nlm.nih.gov/sra?LinkName=biosample_sra&from_uid=12231096   
+
+```{r , message=F}
+# Separate cells by sequencing runs
+runs_info <- read_rds("cell_run_info.rds")
+
+# duplicated(runs_info$barcode) %>% table() #sanity check
+
+run1.id <- runs_info %>% filter(run==1) %>% pull(barcode) #GSM3930530
+run2.id <- runs_info %>% filter(run==2) %>% pull(barcode) #GSM3930531
+
+run1 <- select(counts,SYMBOL,!!run1.id) %>% column_to_rownames("SYMBOL") %>% as.data.frame()
+run2 <- select(counts,SYMBOL,!!run2.id) %>% column_to_rownames("SYMBOL") %>% as.data.frame()
+
+# create seurat v2 objects and normalize
+run1 <- CreateSeuratObject(run1,min.features = 500)
+run1 <- NormalizeData(run1)
+run1 <- FilterCells(run1, subset.names = "nGene", low.thresholds = 500, high.thresholds = 6000)
+run1 <- ScaleData(run1, display.progress = F)
+run1 <- FindVariableGenes(run1,do.plot = F)
+
+run2 <- CreateSeuratObject(run2)
+run2 <- FilterCells(run2, subset.names = "nGene", low.thresholds = 500, high.thresholds = 6000)
+run2 <- NormalizeData(run2)
+run2 <- ScaleData(run2, display.progress = F)
+run2 <- FindVariableGenes(run2,do.plot = F)
+
+
+# CCA Data aligment
+genes.use <- unique(c(head(rownames(run1@hvg.info), 2000),
+                      head(rownames(run2@hvg.info), 2000)))
+
+run1@meta.data$run <- "run_1"
+run2@meta.data$run <- "run_2"
+
+# Add treatment to metadata
+run1@meta.data$treatment <- "BS" #for baseline
+run2@meta.data$treatment <- "BS"
+
+# Run CCA
+BS.spheroid <- RunCCA(object= run1,object2 = run2, genes.use = genes.use)
+
+# MetageneBicorPlot(BS.spheroid, grouping.var = "run", dims.eval = 1:20, display.progress = F)
+
+# Align the CCA subspaces 
+BS.spheroid <- AlignSubspace(BS.spheroid, reduction.type = "cca", grouping.var = "run", dims.align = 1:9)
+
+rm(run1,run2,run1.id,run2.id,runs_info,genes.use)#clean stuff
+```
+
+
+## Dimensionality reduction and cluster identification
+
+```{r, message=F,echo=F}
+# t-SNE and Clustering
+BS.spheroid <- RunTSNE(BS.spheroid, reduction.use = "cca.aligned", dims.use = 1:9, do.fast = F,perplexity=100,
+                          exaggeration_factor=120, theta=0, seed.use = 12345,tsne.method = "Rtsne")
+
+BS.spheroid <- FindClusters(BS.spheroid, print.output = F,reduction.type = "cca.aligned",
+                            resolution = 1, dims.use = 1:9,force.recalc = T,save.SNN=T)
+
+# DimPlot(object = BS.spheroid, reduction.use = "tsne", no.legend = F, do.return = TRUE, group.by = "ident",
+#         vector.friendly = TRUE, pt.size = 0.5)  + theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+
+## Add metadata -  cell identity to clusters
+
+Cluster identity was done with public data (Bader 2018, Grun 2019, Henderson 2019).
+
+Bader dataset 2018 (this one describes liver cell types specific markers in figure 2.d):     
+Paper: https://www.nature.com/articles/s41467-018-06318-7    
+GEO: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE115469    
+Github: https://github.com/BaderLab/HumanLiver    
+     
+Grun dataset 2019:      
+Paper: https://www.nature.com/articles/s41586-019-1373-2   
+GEO: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE124395   
+Interactive map: http://human-liver-cell-atlas.ie-freiburg.mpg.de/    
+     
+Henderson dataset 2019 (Fibrotic niche):    
+Paper: https://www.nature.com/articles/s41586-019-1631-3    
+GEO: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE136103    
+Interactive map: http://www.livercellatlas.mvm.ed.ac.uk//   
+
+
+```{r}
+#BS.spheroid@meta.data$cell.type <- NULL
+
+cell.type <- data.frame(res.1=as.character(0:9),cell.type=c(rep("hepatocyte",4),"macrophage",rep("hepatocyte",3),"cholangiocytes","stellated"))
+
+cell.type_id <- BS.spheroid@meta.data %>% left_join(cell.type,by="res.1") #%>% dplyr::select(cell.type)
+rownames(cell.type_id) <- rownames(BS.spheroid@meta.data)
+
+
+# AddMetaData adds columns to object@meta.data, and is a great place to
+BS.spheroid <- AddMetaData(object = BS.spheroid, metadata = cell.type_id, col.name = "cell.type")
+
+cell.type %>% rename(Cluster=res.1,"Cell type"=cell.type) %>% knitr::kable()
+```
+
+### tSNE plots by cell type and clusters
+```{r,fig.height=8,fig.width=8,fig.align="centre"}
+DimPlot(object = BS.spheroid, reduction.use = "tsne", no.legend = T,do.label = T, do.return = TRUE, 
+              vector.friendly = TRUE, pt.size = 1,group.by = "cell.type") + ggtitle("Cell types") +
+  theme(plot.title = element_text(hjust = 1))
+
+DimPlot(object = BS.spheroid, reduction.use = "tsne", no.legend = F, do.return = TRUE, 
+              vector.friendly = TRUE, pt.size = 1) + ggtitle("Clusters") + 
+  theme(plot.title = element_text(hjust = 1))
+
+
+```
+
+### Example gene expression
+```{r}
+# VlnPlot(object = BS.spheroid, features.plot = "HP",group.by = "ident", point.size.use = 0,do.return = T,y.log = T) + theme_classic() + theme(legend.position = "none")
+# VlnPlot(object = BS.spheroid, features.plot = "MS4A7",group.by = "ident", point.size.use = 0,do.return = T,y.log = T) + theme_classic() + theme(legend.position = "none")
+# VlnPlot(object = BS.spheroid, features.plot = "KRT19",group.by = "ident", point.size.use = 0,do.return = T,y.log = T) + theme_classic() + theme(legend.position = "none")
+# VlnPlot(object = BS.spheroid, features.plot = "COL1A1",group.by = "ident", point.size.use = 0,do.return = T,y.log = T) + theme_classic() + theme(legend.position = "none")
+
+VlnPlot(object = BS.spheroid, features.plot = c("HP","MS4A7","KRT19","COL1A1"),
+        group.by = "cell.type", point.size.use = 0,do.return = T,y.log = T,nCol = 2,cols.use = scales::viridis_pal()(4)) 
+
+VlnPlot(object = BS.spheroid, features.plot = c("HP","MS4A7","KRT19","COL1A1"),
+        point.size.use = 0,do.return = T,y.log = T,nCol = 2,cols.use = scales::viridis_pal()(10)) 
+
+```
+
+
+## Gene markers identification for scPPIN
+
+As described in manuscript, this was done without filtering, therefore this step it does take some time to run (~45 min in a 2017 ok machine)
+```{r,eval=FALSE}
+#only hepatocytes
+genes.per.cluster.bs_nofilter <- FindAllMarkers(object = BS.spheroid,print.bar = F,random.seed = 12345,logfc.threshold=0.0,return.thresh = 1)
+write_rds(genes.per.cluster.bs_nofilter,path = "genes.per.cluster.bs_nofilter_20190423.RDS",compress = "xz")
+```
+
+```{r}
+genes.per.cluster.bs_nofilter <- read_rds("genes.per.cluster.bs_nofilter_20190423.RDS") %>% as_tibble()
+genes.per.cluster.bs_nofilter
+
+genes.per.cluster.bs_nofilter %>% filter(p_val_adj<=0.05) %>% group_by(cluster) %>% inner_join(cell.type,by=c("cluster"="res.1")) %>% count(cell.type) %>% rename("number of cells"=n)
+
+```
+
+
+### Description of output of DEG per cluster
+
+```{r}
+
+metadata %>% count(cluster_id,cell.type) %>% arrange(-n) %>% mutate(label=paste0("C",cluster_id,"_",cell.type)) %>% 
+  ggplot(aes(x=label,n,fill=cell.type))+geom_bar(stat = "identity",show.legend = F) + labs(x=NULL,y="Counts") + coord_flip() +
+  scale_fill_manual(values = scales::brewer_pal(palette = "Set1")(4)) + ggtitle("Cells per cluster")
+
+cell.labels <- metadata %>% count(cluster_id,cell.type) %>% arrange(-n) %>% mutate(label=paste0("C",cluster_id,"_",cell.type),
+                                                                                   cluster_id=as.character(cluster_id)) %>%
+  rename(cluster=cluster_id)
+
+
+left_join(genes.per.cluster.bs_nofilter,cell.labels,by="cluster") %>% 
+  ggplot(aes(p_val,fill=cell.type)) + geom_histogram(bins = 50) + facet_wrap(~label,scales = "free_y",ncol = 3) + 
+  scale_y_log10() + labs(title = "P-value distribution",x="nominal p-value",y="count") + theme_classic() +
+  scale_fill_manual(values = scales::brewer_pal(palette = "Set1")(4)) + theme(legend.position = "none")
+
+
+```
+
+
+<!-- ### Pairwise combination cluster versus cluster -->
+
+
+<!-- ```{r,eval=FALSE} -->
+<!-- # get all pairwise combinations, half of the triangle -->
+<!-- #Clusters <- unique(as.numeric(BS.spheroid@meta.data$res.1)) %>% sort() -->
+
+<!-- Clusters <- cell.type %>% filter(cell.type=="hepatocyte") %>% pull(res.1) %>% as.character() -->
+
+<!-- pariwised.combinations <- combn(Clusters,2) %>% t() %>% data.frame() %>% rename(ident.1=X1,ident.2=X2) -->
+
+
+<!-- # A versus B amd B versus A just for completeness -->
+<!-- pariwised.combinations <- rbind(pariwised.combinations, -->
+<!--                                 data.frame(ident.1=pariwised.combinations$ident.2,ident.2=pariwised.combinations$ident.1)) -->
+
+<!-- BS.spheroid <- SetAllIdent(BS.spheroid,id = "res.1" ) -->
+
+<!-- cluster_vs_cluster <- data.frame() -->
+<!-- for (i in 1:nrow(pariwised.combinations)) { -->
+<!--   combination <- paste0("Cluster_Number_",pariwised.combinations[i,1],"_vs_",pariwised.combinations[i,2])   -->
+<!--   DEG <- FindMarkers(BS.spheroid, ident.1 = pariwised.combinations[i,1], ident.2 = pariwised.combinations[i,2],print.bar = F,logfc.threshold=0.0,random.seed = 12345) -->
+<!--   DEG <- DEG %>% rownames_to_column("symbol") %>% mutate(ident.1_vs_ident.2=paste(combination),ident.1 = pariwised.combinations[i,1], ident.2 = pariwised.combinations[i,2]) -->
+<!--   cluster_vs_cluster <- rbind(cluster_vs_cluster,DEG) -->
+<!-- } -->
+
+<!-- saveRDS(cluster_vs_cluster,"cluster_vs_cluster_DEG_version4.RDS",compress = "xz") -->
+
+<!-- message("Adjusted p-val need to be corrected") -->
+<!-- cluster_vs_cluster$p_val_adj <- p.adjust(cluster_vs_cluster$p_val_adj,method = "BH") -->
+
+<!-- ``` -->
+
+
+
+
+
+
+
+# System Info
+```{r}
+sessionInfo()
+```
+
+
+
+

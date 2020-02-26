@@ -229,7 +229,7 @@ FunctionalModuleComputation<- function(graph,falseDiscoveryRate,suboptimalCost){
   pValues <- V(graph)$pVal
   names(pValues) <- V(graph)$name
 
-  fitModel <- fitBUM(pValues, plot=FALSE)
+  fitModel <- fitBUM(pValues[which(is.finite(pValues)) ], plot=FALSE)
   nodeScores<- computeNodeScores(graph,pValues,fitModel,fdr=falseDiscoveryRate,missingDataScore=FALSE)
 
   # 2) Shift the scores to formulate the MWST to a PCST
