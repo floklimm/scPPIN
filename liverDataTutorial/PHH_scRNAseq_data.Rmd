@@ -28,7 +28,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Data Loading from GEO
 
 Getting the dataset from GEO, accession [GSE133948](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE133948).
-This notebook was done with Seurat version 2, to install it plese follow the instructions from [here](https://satijalab.org/seurat/install.html)
+This notebook was done with Seurat version 2, to install it please follow the instructions from [here](https://satijalab.org/seurat/install.html)
 
 ```{r, message=F}
 suppressMessages(library(tidyverse))
@@ -37,7 +37,7 @@ suppressMessages(library(cowplot))
 suppressMessages(library(Seurat))
 ```
 
-```{r, echo=F,message=F}
+```{r, message=F}
 if (packageVersion("Seurat")!='2.3.4'){ stop("Please install Seurat v2. Instructions here: https://satijalab.org/seurat/install.html")}
 # Get data from https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE133948
 counts <- read_csv("ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE133nnn/GSE133948/suppl/GSE133948_Raw.counts_baseline_liverspheroid.csv.gz") %>% rename(SYMBOL=X1)
@@ -192,7 +192,7 @@ write_rds(genes.per.cluster.bs_nofilter,path = "genes.per.cluster.bs_nofilter_20
 genes.per.cluster.bs_nofilter <- read_rds("genes.per.cluster.bs_nofilter_20190423.RDS") %>% as_tibble()
 genes.per.cluster.bs_nofilter
 
-genes.per.cluster.bs_nofilter %>% filter(p_val_adj<=0.05) %>% group_by(cluster) %>% inner_join(cell.type,by=c("cluster"="res.1")) %>% count(cell.type) %>% rename("number of cells"=n)
+genes.per.cluster.bs_nofilter %>% filter(p_val_adj<=0.05) %>% group_by(cluster) %>% inner_join(cell.type,by=c("cluster"="res.1")) %>% count(cell.type) %>% rename("Number of DEG genes (Adj p-val <= 0.05)"=n)
 
 ```
 

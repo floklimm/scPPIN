@@ -483,12 +483,16 @@ bioRxiv 698647; doi: <a href="https://doi.org/10.1101/698647" class="uri">https:
 </blockquote>
 <div id="data-loading-from-geo" class="section level2">
 <h2>Data Loading from GEO</h2>
-<p>Getting the dataset from GEO, accession <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE133948">GSE133948</a>. This notebook was done with Seurat version 2, to install it plese follow the instructions from <a href="https://satijalab.org/seurat/install.html">here</a></p>
+<p>Getting the dataset from GEO, accession <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE133948">GSE133948</a>. This notebook was done with Seurat version 2, to install it please follow the instructions from <a href="https://satijalab.org/seurat/install.html">here</a></p>
 <pre class="r"><code>suppressMessages(library(tidyverse))
 suppressMessages(library(cowplot))
 #source(&quot;https://z.umn.edu/archived-seurat&quot;) # to install v2 
 suppressMessages(library(Seurat))</code></pre>
+<pre class="r"><code>if (packageVersion(&quot;Seurat&quot;)!='2.3.4'){ stop(&quot;Please install Seurat v2. Instructions here: https://satijalab.org/seurat/install.html&quot;)}
+# Get data from https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE133948
+counts &lt;- read_csv(&quot;ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE133nnn/GSE133948/suppl/GSE133948_Raw.counts_baseline_liverspheroid.csv.gz&quot;) %&gt;% rename(SYMBOL=X1)</code></pre>
 <pre><code>## Warning: Missing column names filled in: 'X1' [1]</code></pre>
+<pre class="r"><code>metadata &lt;- read_csv(&quot;ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE133nnn/GSE133948/suppl/GSE133948_metadata_cells.csv.gz&quot;)</code></pre>
 </div>
 <div id="reconstruct-seurat-object" class="section level2">
 <h2>Reconstruct Seurat Object</h2>
@@ -670,21 +674,21 @@ genes.per.cluster.bs_nofilter</code></pre>
 ##  9 1.98e-197     -1.48 0.783 0.994 3.03e-193 0       RPL23A
 ## 10 3.17e-197     -1.47 0.79  0.995 4.86e-193 0       RPL27A
 ## # … with 59,778 more rows</code></pre>
-<pre class="r"><code>genes.per.cluster.bs_nofilter %&gt;% filter(p_val_adj&lt;=0.05) %&gt;% group_by(cluster) %&gt;% inner_join(cell.type,by=c(&quot;cluster&quot;=&quot;res.1&quot;)) %&gt;% count(cell.type) %&gt;% rename(&quot;number of cells&quot;=n)</code></pre>
+<pre class="r"><code>genes.per.cluster.bs_nofilter %&gt;% filter(p_val_adj&lt;=0.05) %&gt;% group_by(cluster) %&gt;% inner_join(cell.type,by=c(&quot;cluster&quot;=&quot;res.1&quot;)) %&gt;% count(cell.type) %&gt;% rename(&quot;Number of DEG genes (Adj p-val &lt;= 0.05)&quot;=n)</code></pre>
 <pre><code>## # A tibble: 10 x 3
 ## # Groups:   cluster [10]
-##    cluster cell.type      `number of cells`
-##    &lt;fct&gt;   &lt;fct&gt;                      &lt;int&gt;
-##  1 0       hepatocyte                  1749
-##  2 1       hepatocyte                  3331
-##  3 2       hepatocyte                   737
-##  4 3       hepatocyte                   635
-##  5 4       macrophage                  2379
-##  6 5       hepatocyte                   577
-##  7 6       hepatocyte                   876
-##  8 7       hepatocyte                   497
-##  9 8       cholangiocytes              1937
-## 10 9       stellated                    654</code></pre>
+##    cluster cell.type      `Number of DEG genes (Adj p-val &lt;= 0.05)`
+##    &lt;fct&gt;   &lt;fct&gt;                                              &lt;int&gt;
+##  1 0       hepatocyte                                          1749
+##  2 1       hepatocyte                                          3331
+##  3 2       hepatocyte                                           737
+##  4 3       hepatocyte                                           635
+##  5 4       macrophage                                          2379
+##  6 5       hepatocyte                                           577
+##  7 6       hepatocyte                                           876
+##  8 7       hepatocyte                                           497
+##  9 8       cholangiocytes                                      1937
+## 10 9       stellated                                            654</code></pre>
 <div id="description-of-output-of-deg-per-cluster" class="section level3">
 <h3>Description of output of DEG per cluster</h3>
 <pre class="r"><code>metadata %&gt;% count(cluster_id,cell.type) %&gt;% arrange(-n) %&gt;% mutate(label=paste0(&quot;C&quot;,cluster_id,&quot;_&quot;,cell.type)) %&gt;% 
