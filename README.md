@@ -6,7 +6,9 @@ This R library allows the computation of active modules in protein-protein inter
 
 > Functional module detection through integration of single-cell RNA sequencing data with protein–protein interaction networks.  
 > Florian Klimm, Enrique M. Toledo, Thomas Monfeuga, Fang Zhang, Charlotte M. Deane, and Gesine Reinert  
-> bioRxiv 698647; doi: https://doi.org/10.1101/698647
+> BMC Genomics 21, Article number: 756 (2020) https://doi.org/10.1186/s12864-020-07144-2
+
+
 
 The preprint is available on [bioRxiv](https://www.biorxiv.org/content/10.1101/698647v1).
 
