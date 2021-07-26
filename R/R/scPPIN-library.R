@@ -354,7 +354,7 @@ BUMdensityCummulative <- function(x,lambda,alpha){ lambda*x + (1-lambda)*x^(alph
 # fitting a a beta-uniform mixture to the observed, uncorrected p-values
 fitBUM <- function(pValues, plot = FALSE){
   # fitting the distribution
-  mlFit<-fitdistr(pValues, BUMdensity,start=list(lambda=0.50,alpha=0.50),lower=list(10^-300,10^-300),upper=list(1-10^-9,1-10^-9))
+  mlFit<-fitdistr(pValues, BUMdensity,start=list(lambda=0.50,alpha=0.50))
 
   # if wanted, we can also show a distirbution of the p-values and a plot
   if(plot){
