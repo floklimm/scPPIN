@@ -1,6 +1,6 @@
 # scPPIN
 
-**There exists also a [webtool](https://floklimm.shinyapps.io/scPPIN-online/).**
+**There exists also a [Python implementation](https://github.com/shahrozeabbas/scppin-py) and a [webtool](https://floklimm.shinyapps.io/scPPIN-online/) **
 
 This R library allows the computation of active modules in protein-protein interaction networks by integration with single-cell RNA sequencing data. The method is outlined in our manuscript
 
